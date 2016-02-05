@@ -11,8 +11,7 @@ var CaseStudy = new keystone.List('CaseStudy', {
   singular: "Case Study",
   plural: "Case Studies",
 	map: { name: 'title' },
-	autokey: { path: 'slug', from: 'title', unique: true },
-  label: "The below case studies are sortable. Only the first element in the list will be displayed. Please sort the case studies accordingly."
+	autokey: { path: 'slug', from: 'title', unique: true }
 });
 
 CaseStudy.add({
@@ -20,8 +19,11 @@ CaseStudy.add({
 	publishedDate: { type: Types.Date, index: true },
 	title: { type: String },
   logo: { type: Types.CloudinaryImage },
+  catchPhrase: { type: String },
+  actionLink: { type: Types.Url },
 	backgroundImage: { type: Types.CloudinaryImage }
 });
 
+CaseStudy.track = true;
 CaseStudy.defaultColumns = 'title, author|20%, publishedDate|20%';
 CaseStudy.register();

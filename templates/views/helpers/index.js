@@ -28,7 +28,7 @@ module.exports = function() {
   _helpers.inc = function(value, options) {
     return parseInt(value) + 1;
   };
-	
+
 	/**
 	 * Generic HBS Helpers
 	 * ===================
