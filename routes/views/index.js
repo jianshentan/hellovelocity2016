@@ -13,6 +13,7 @@ exports = module.exports = function(req, res) {
 	view.query('banners', keystone.list('Banner').model.find().sort('sortOrder'));
   view.query('case-studies', keystone.list('CaseStudy').model.find().sort('sortOrder'));
 	view.query('projects', keystone.list('Project').model.find().sort('sortOrder'));
+	view.query('links', keystone.list('Link').model.find().sort('sortOrder'));
 	
 	// Render the view
 	view.render('index');
