@@ -5843,7 +5843,7 @@ button.close {
   font-weight: 700; }
 
 /* Sass variables and Classes -------------- */
-.scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-newsletter {
+.scss-large-content-font, .hv-newsletter, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title {
   font-family: Montserrat;
   font-weight: 700;
   font-size: 5vw; }
@@ -5857,6 +5857,9 @@ button.close {
  *   }
  * }
  */
+/* ========================================== 
+   Default
+   ========================================== */
 /* Base ------------------------------------- */
 body {
   min-width: 768px;
@@ -5868,13 +5871,89 @@ body {
   height: 70px;
   background-color: #0000ff;
   position: fixed;
-  z-index: 1000; }
+  z-index: 1000;
+  cursor: pointer;
+  left: 0px;
+  top: 0px; }
 
 .hv-nav img {
   width: 50px;
   height: 50px;
   margin: 10px; }
 
+.hv-nav-expanded {
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #0000ff;
+  display: none; }
+
+.hv-nav-links {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%); }
+
+.hv-nav-link {
+  color: white;
+  font-size: 4vw; }
+
+/* Newsletter ------------------------------ */
+.hv-newsletter {
+  background-color: #0000ff;
+  font-weight: 400 !important;
+  height: 20vw;
+  color: white;
+  position: relative; }
+
+.hv-newsletter-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
+  line-height: 1.4em; }
+
+@media all and (max-width: 768px) {
+  .hv-newsletter-wrapper {
+    font-size: 42px; }
+  .hv-newsletter {
+    height: 150px; } }
+
+.hv-newsletter-form {
+  border-bottom: 4px solid white; }
+
+.hv-newsletter-input {
+  background-color: #0000ff;
+  border: 0px; }
+
+.hv-newsletter-input:focus,
+.hv-newsletter-submit:focus {
+  outline-width: 0; }
+
+.hv-newsletter-submit {
+  border: 0px;
+  background-color: white;
+  color: #0000ff; }
+
+.hv-footer-information {
+  height: 5vw;
+  background-color: #ccc; }
+
+.hv-footer-links-wrapper {
+  float: right; }
+
+.hv-footer-link {
+  line-height: 5vw;
+  display: inline-block;
+  padding-left: 2vw; }
+
+.hv-footer-link a {
+  color: #0000ff; }
+
+/* ========================================== 
+   Home
+   ========================================== */
 /* Banners ---------------------------------- */
 .hv-banners {
   margin-top: 10vh;
@@ -6088,53 +6167,52 @@ body {
   position: absolute;
   bottom: 0px; }
 
-/* Newsletter ------------------------------ */
-.hv-newsletter {
-  background-color: #0000ff;
-  font-weight: 400 !important;
-  height: 20vw;
+/* ==========================================
+   Project Page 
+   ========================================== */
+.hv-project-title {
   color: white;
-  position: relative; }
+  margin-top: 10vh;
+  text-align: center; }
 
-.hv-newsletter-wrapper {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-55%);
-  line-height: 1.4em; }
+.hv-project-description {
+  font-size: Montserrat;
+  color: white;
+  text-align: center; }
 
-@media all and (max-width: 768px) {
-  .hv-newsletter-wrapper {
-    font-size: 42px; }
-  .hv-newsletter {
-    height: 150px; } }
-
-.hv-newsletter-form {
-  border-bottom: 4px solid white; }
-
-.hv-newsletter-input {
-  background-color: #0000ff;
-  border: 0px; }
-
-.hv-newsletter-input:focus,
-.hv-newsletter-submit:focus {
-  outline-width: 0; }
-
-.hv-newsletter-submit {
-  border: 0px;
-  background-color: white;
-  color: #0000ff; }
-
-.hv-footer-information {
-  height: 5vw;
+.hv-project-slideshow-wrapper {
+  width: 100vw;
   background-color: #ccc; }
 
-.hv-footer-links-wrapper {
-  float: right; }
+.hv-project-slideshow {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  position: relative; }
 
-.hv-footer-link {
-  line-height: 5vw;
+.hv-project-slide.active {
+  display: block; }
+
+.hv-project-slide {
+  display: none;
+  width: 100%; }
+
+.hv-project-nav-container {
+  position: absolute;
+  z-index: 10;
+  right: 12px;
+  top: 12px; }
+
+.hv-project-nav {
+  border: 3px solid #0000ff;
+  color: #0000ff;
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 25px;
   display: inline-block;
-  padding-left: 2vw; }
+  cursor: pointer; }
 
-.hv-footer-link a {
-  color: #0000ff; }
+.hv-project-nav.active {
+  background-color: #0000ff;
+  color: white; }

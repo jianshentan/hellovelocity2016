@@ -15,6 +15,7 @@ Project.add(
   "General",
   {
     title: { type: String, required: true },
+    year: { type: String },
     state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
     author: { type: Types.Relationship, ref: 'User', index: true },
     publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
@@ -30,6 +31,7 @@ Project.add(
   },
   "Page",
   {
+    pageLogo: { type: Types.CloudinaryImage },
     pageDescription: { type: String },
     pageGallery: { type: Types.CloudinaryImages },
     pageContentImages: { type: Types.CloudinaryImages, label: "upload images here to use them in the content section" },

@@ -11,10 +11,16 @@ var Link = new keystone.List('Link', {
 	autokey: { path: 'slug', from: 'title', unique: true }
 });
 
-Link.add({
-	title: { type: String, required: true },
-	url: { type: Types.Url }
-});
+Link.add(
+  {
+    title: { type: String, required: true },
+    url: { type: Types.Url },
+  },
+  "Display Options", {
+    navigation: { type: Types.Boolean, label: "Display in navigation" },
+    footer: { type: Types.Boolean, label: "Display in footer" }
+  }
+);
 
-Link.defaultColumns = 'title, url|20%';
+Link.defaultColumns = 'title, url|20%, navigation|20%, footer|20%';
 Link.register();

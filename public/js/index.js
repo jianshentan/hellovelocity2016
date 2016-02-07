@@ -1,25 +1,7 @@
 (function() {
 
   // banner navigation 
-  $( ".hv-banner-nav" ).each( function() {
-    var navButton = $( this );
-    var index = navButton.data( "id" );
-
-    navButton.click( function() {
-      deactivateAll( ".hv-banner-nav" );
-      deactivateAll( ".hv-banner" );
-      console.log( index );
-
-      $( this ).addClass( "active" );
-      $( ".hv-banner[data-id='" + index + "']" ).addClass( "active" );
-    });
-  });
-
-  function deactivateAll( selector ) {
-    $( selector ).each( function() {
-      $( this ).removeClass( "active" );
-    });
-  }
+  hvUtil.slideshow( ".hv-banner", ".hv-banner-nav" );
 
   // mission cursor
   var minWidth = 768-48;
@@ -59,24 +41,6 @@
   });
 
 })();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

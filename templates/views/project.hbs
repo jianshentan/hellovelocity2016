@@ -1,0 +1,34 @@
+<div class="hv-project-slideshow-wrapper">
+  <div class="container">
+    <div class="hv-project-title">{{ data.project.title }}{{ data.project.year }}</div>
+    <div class="hv-project-description">{{ data.project.pageDescription }}</div>
+    <!-- Project Slides -->
+    <div class="hv-project-slideshow">
+
+      <!-- Project Slides Navigation -->
+      <div class="hv-project-nav-container">
+        {{#each data.project.pageGallery}}
+        <div data-id="{{@index}}"
+          {{#if @first}}class="hv-project-nav active"
+          {{else}} class="hv-project-nav"
+          {{/if}}>{{inc @index}}</div>
+        {{/each}}
+      </div>
+
+      <!-- Project Slides -->
+      <div class="hv-project-slideshow">
+        {{#each data.project.pageGallery }}
+        <img data-id="{{@index}}" src="{{ url }}"
+          {{#if @first}} class="hv-project-slide active"
+          {{else}} class="hv-project-slide"
+          {{/if}}/>
+        {{/each}}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- .js links -->
+<script src="/js/util.js"></script>
+<script src="/js/project.js"></script>

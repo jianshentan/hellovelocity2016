@@ -19,20 +19,35 @@ var _ = require('underscore');
 	or replace it with your own templates / logic.
 */
 
+var keystone = require('keystone');
+
 exports.initLocals = function(req, res, next) {
 	
 	var locals = res.locals;
-	
+
 	locals.navLinks = [
 		{ label: 'Home',		key: 'home',		href: '/' },
 		{ label: 'Blog',		key: 'blog',		href: '/blog' }
 	];
 	
 	locals.user = req.user;
-	
+
 	next();
 	
 };
+
+/**
+  Send links to all routes	
+*/
+
+exports.loadLinks = function(req, res, next) {
+  keystone.list('Link').model.find().sort('sortOrder').exec( function( err, links ) {
+    if (err) return next(err);
+    req.links = links;
+    res.locals.links = links;
+    next();
+  });
+}
 
 
 /**
