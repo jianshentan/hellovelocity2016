@@ -29,6 +29,22 @@ var hvUtil = (function() {
     });
   }
 
+  // project color replace
+  $( "*[data-color]" ).each( function() {
+    var primaryColor = $( this ).data( "color" );
+    $( this ).css( "color", primaryColor );
+  });
+
+  $( "*[data-bg-color]" ).each( function() {
+    var backgroundColor = $( this ).data( "bg-color" );
+    $( this ).css( "background-color", backgroundColor);
+  });
+
+  $( "*[data-border-color]" ).each( function() {
+    var borderColor = $( this ).data( "border-color" );
+    $( this ).css( "border", "2px solid " + borderColor );
+  });
+
   return { slideshow }
 
 })();

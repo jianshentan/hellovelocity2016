@@ -3,18 +3,6 @@
 <div class="container">
   <div class="hv-banners">
 
-    <!-- Banner Navigation -->
-    <div class="hv-banner-nav-container">
-      {{#each banners}}
-      {{#if display}}
-      <div data-id="{{@index}}"
-        {{#if @first}}class="hv-banner-nav active"
-        {{else}} class="hv-banner-nav"
-        {{/if}}>{{inc @index}}</div>
-      {{/if}}
-      {{/each}}
-    </div>
-
     <!-- Banner Content -->
     <div class="hv-banner-container">
       {{#each banners}}
@@ -23,6 +11,18 @@
         {{#if @first}} class="hv-banner active" 
         {{else}} class="hv-banner" 
         {{/if}}/>
+      {{/if}}
+      {{/each}}
+    </div>
+
+    <!-- Banner Navigation -->
+    <div class="hv-banner-nav-container">
+      {{#each banners}}
+      {{#if display}}
+      <div data-id="{{@index}}"
+        {{#if @first}}class="hv-banner-nav active"
+        {{else}} class="hv-banner-nav"
+        {{/if}}>{{inc @index}}</div>
       {{/if}}
       {{/each}}
     </div>
@@ -90,14 +90,14 @@
           </div></a>
         </div>
 
-        <div class="hv-project-banner-content">
+        <a href="{{ projectLink }}"><div class="hv-project-banner-content">
           <div class="hv-project-banner-description">
             {{ bannerDescription }}
           </div>
           <div class="hv-project-banner-image-wrapper">
             <img class="hv-project-banner-image" src="{{ bannerImage.url }}"/>
           </div>
-        </div>
+        </div></a>
 
       </div>
     </div>   

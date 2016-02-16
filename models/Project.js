@@ -7,6 +7,7 @@ var Types = keystone.Field.Types;
  */
 
 var Project = new keystone.List('Project', {
+  sortable: true,
 	map: { name: 'title' },
 	autokey: { path: 'slug', from: 'title', unique: true }
 });
@@ -21,7 +22,8 @@ Project.add(
     publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
     backgroundColor: { type: Types.Color },
     primaryColor: { type: Types.Color },
-    link: { type: Types.Url }
+    link: { type: Types.Url },
+    projectLink: { type: Types.Url }
   },
   "Banner",
   {

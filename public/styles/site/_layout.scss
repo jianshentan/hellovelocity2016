@@ -2,6 +2,7 @@
 
 $primary-color: #0000ff;
 $primary-color-transparent: rgba(0,0,256,0.3);
+$dark-grey: #555;
 
 $screen-xs-max: 768px;
 $screen-sm-min: 768px;
@@ -15,15 +16,16 @@ $screen-lg-min: 1200px;
   font-weight: 700;
   font-size: 5vw;
 }
-/* 
- * .scss-large-content-font needs to be appended with this media query
- * in order to support this responsive design
- * @media all and (max-width: $screen-xs-max) {
- *   .hv-newsletter-wrapper {
- *     font-size: 42px;
- *   }
- * }
- */
+@media screen and (min-width: $screen-lg-min) {
+  .scss-large-content-font {
+    font-size: 64px;
+  }
+}
+@media all and (max-width: $screen-xs-max) {
+  .scss-large-content-font {
+    font-size: 42px;
+  }
+}
 
 /* ========================================== 
    Default
@@ -58,6 +60,7 @@ body {
   position: fixed;
   background-color: $primary-color;
   display: none;
+  font-family: Montserrat;
 }
 .hv-nav-links {
   position: absolute;
@@ -88,9 +91,6 @@ body {
   line-height: 1.4em;
 }
 @media all and (max-width: $screen-xs-max) {
-  .hv-newsletter-wrapper {
-    font-size: 42px;
-  }
   .hv-newsletter {
     height: 150px;
   }
@@ -111,12 +111,21 @@ body {
   background-color: white;
   color: $primary-color;
 }
+
+/* Footer ----------------------------------- */
+
 .hv-footer-information {
   height: 5vw;
   background-color: #ccc;
 }
+.hv-footer-copyright {
+  line-height: 5vw;
+  display: inline-block;
+  color: $dark-grey;
+}
 .hv-footer-links-wrapper {
   float: right;
+  display: inline-block;
 }
 .hv-footer-link {
   line-height: 5vw;
@@ -124,7 +133,17 @@ body {
   padding-left: 2vw;
 }
 .hv-footer-link a {
-  color: $primary-color;
+  color: $dark-grey;
+  text-decoration: none;
+}
+@media all and (max-width: $screen-xs-max) {
+  .hv-footer-information {
+    min-height: 60px;
+  }
+  .hv-footer-copyright ,
+  .hv-footer-link {
+    line-height: 60px;
+  }
 }
 
 /* ========================================== 
@@ -141,17 +160,19 @@ body {
   display: none;
   width: 100%;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+  max-height: 60vw;
+  min-height: 390px;
 }
 .hv-banner.active {
   display: block;
 }
 .hv-banner-nav-container {
-  position: absolute;
-  right: 12px;
-  top: 12px;
+  float: right;
+  margin-top: 12px;
+  margin-bottom: 10vh;
 }
 .hv-banner-nav {
-  border: 3px solid $primary-color;
+  border: 2px solid $primary-color;
   color: $primary-color;
   border-radius: 20px;
   width: 30px;
@@ -160,6 +181,7 @@ body {
   line-height: 25px;
   display: inline-block;
   cursor: pointer;
+  margin-left: 6px;
 }
 .hv-banner-nav.active {
   background-color: $primary-color;
@@ -173,11 +195,7 @@ body {
   margin-bottom: 10vh;
   min-width: $screen-xs-max - 48;
 }
-@media all and (max-width: $screen-xs-max) {
-  .hv-mission-container {
-    font-size: 42px;
-  }
-}
+
 .hv-art-mission,
 .hv-commercial-mission {
   position: absolute;
@@ -299,11 +317,6 @@ body {
   min-width: $screen-xs-max - 30;
   color: $primary-color;
 }
-@media all and (max-width: $screen-xs-max) {
-  .hv-projects-heading {
-    font-size: 42px;
-  }
-}
 .hv-projects-banners {
   margin-bottom: 10vh;
 }
@@ -314,6 +327,7 @@ body {
   background-color: #aaa; /* load color */
   color: white;
   position: relative;
+  cursor: pointer;
 }
 .hv-project-banner-header {
   position: relative;
@@ -339,6 +353,7 @@ body {
   position: absolute;
   width: 100%;
   top: 0px;
+  color: white;
 }
 .hv-project-banner-description {
   padding:10%;
@@ -365,6 +380,8 @@ body {
    Project Page 
    ========================================== */
 
+/* Project page - slideshow/title ----------- */
+
 .hv-project-title {
   @extend .scss-large-content-font;
   color: white;
@@ -375,6 +392,7 @@ body {
   font-size: Montserrat;
   color: white;
   text-align: center;
+  font-size: 1.4em;
 }
 .hv-project-slideshow-wrapper {
   width: 100vw;
@@ -382,7 +400,6 @@ body {
 }
 .hv-project-slideshow {
   margin-top: 10vh;
-  margin-bottom: 10vh;
   position: relative;
 }
 .hv-project-slide.active {
@@ -393,14 +410,12 @@ body {
   width: 100% ;
 }
 .hv-project-nav-container {
-  position: absolute;
-  z-index: 10;
-  right: 12px;
-  top: 12px;
+  float: right;
+  margin-top: 12px;
+  margin-bottom: 10vh;
 }
 .hv-project-nav {
-  border: 3px solid $primary-color;
-  color: $primary-color;
+  border: 2px solid #ccc;
   border-radius: 20px;
   width: 30px;
   height: 30px;
@@ -408,8 +423,315 @@ body {
   line-height: 25px;
   display: inline-block;
   cursor: pointer;
+  margin-left: 6px;
 }
 .hv-project-nav.active {
+  text-decoration: underline;
+}
+@media all and (max-width: $screen-xs-max) {
+  .hv-project-slideshow-wrapper {
+    min-width: $screen-xs-max;
+  }
+  .hv-project-slideshow {
+    margin-top: 5vh;
+  }
+}
+
+/* Project page - content ----------- */
+
+.hv-project-express ,
+.hv-project-content {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+.hv-project-content img, 
+.hv-project-content iframe {
+  max-width: 100%;
+}
+@media all and (max-width: $screen-xs-max) {
+  .hv-project-express ,
+  .hv-project-content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+.hv-project-logo-wrapper {
+  width: 100%;
+  text-align: center;
+}
+.hv-project-logo-link {
+  border-radius: 2px;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+}
+.hv-project-info-title {
+  font-weight: 700;
+  font-size: 2.0em;
+}
+.hv-project-info-year {
+  font-weight: 400;
+}
+
+/* Project Page - share ---------------- */
+
+.hv-project-share {
+  width: 100%;
+  background-color: $primary-color;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin: 0 auto 80px auto;
+  color: white;
+}
+.hv-project-share-label {
+  text-align: center;
+  font-size: 1.4em;
+  margin-bottom: 12px;
+}
+.hv-project-social-container {
+  margin: 6px auto;
+  text-align: center;
+}
+.hv-project-social {
+  display: inline-block;
+  margin: 20px 12px;
+}
+.hv-project-social-icon {
+  width: 60px;
+  height: 60px;
+  background-color: $primary-color;
+  font-size: 1.8em;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 45px;
+  border: 5px solid white;
+  color: white;
+}
+.hv-project-social-label {
+  font-size: 1.0em;
+  margin-top: 12px;
+  color: white;
+}
+.hv-project-share-link {
+  font-size: 3.0em;
+  font-weight: 700;
+  text-align: center;
+  font-family: Montserrat;
+}
+
+/* ==========================================
+   About Page 
+   ========================================== */
+
+.hv-about-banner {
+  background-image: url( "../images/about-image.png" );
+  background-size: cover;
+  width: 100%;
+  min-height: 500px;
+  max-height: 1000px;
+  position: relative;
+}
+.hv-about-banner-text {
+  @extend .scss-large-content-font;
+  color: white;
+  width: 100%;
+  max-width: $screen-lg-min;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+}
+.hv-services-heading {
+  @extend .scss-large-content-font;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+.hv-services {
+  margin-bottom: 10vh;
+}
+.hv-service {
+  width: 100%;
+  height: 120px;
+  background-color: yellow;
+  overflow: hidden;
+  margin-bottom: 24px;
+  position: relative;
+}
+.hv-service-text {
+  position: absolute;
+  line-height: 120px;
+  color: white;
+  z-index: 3;
+  font-size: 3vw;
+  font-weight: 700;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.hv-service-overlay {
+  background-color: $primary-color;
+  opacity: 0.5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.hv-service-image {
+  width: 100%;
+  z-index: 1;
+}
+.hv-about-description {
+  width: 100%;
   background-color: $primary-color;
   color: white;
+  font-size: 3vw;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+@media all and (max-width: $screen-xs-max) {
+  .hv-about-description,
+  .hv-service-text {
+    font-size: 36px;
+  }
+}
+
+/* About contact ------------------------ */
+.hv-contact {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+.hv-contact-instagram {
+}
+.hv-contact-instagram-image {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hv-contact-instagram-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.3;
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.hv-contact-instagram-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translatex(-50%) translatey(-50%);
+  text-align: center;
+  color: $primary-color;
+  font-size: 18px;
+  z-index: 3;
+}
+.hv-contact-instagram-icon {
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border: 4px solid $primary-color;
+  font-size: 50px;
+  line-height: 92px;
+  margin: 0 auto;
+}
+.hv-contact-handle {
+  font-weight: 700;
+}
+.hv-contact-text-wrapper {
+  margin-top: 50%;
+  transform: translatey(-50%);
+}
+@media all and (max-width: $screen-xs-max) {
+  .hv-contact-text-wrapper {
+    font-size: 48px;
+  }
+}
+@media all and (max-width: $screen-sm-max) {
+  .hv-contact {
+    margin-bottom: 0px !important;
+  }
+}
+/* About Team ---------------------------- */
+
+.hv-team {
+  width: 100%;
+  background-color: $primary-color;
+  margin-bottom: 12px;
+}
+.hv-team-heading {
+  @extend .scss-large-content-font;
+  color: white;
+  margin-top: 48px;
+}
+.hv-members {
+  margin-top: 48px;
+  margin-bottom: 48px;
+  position: relative;
+}
+.hv-member-image {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hv-member-overlay {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  background-color: $primary-color;
+  display: none;
+  z-index: 2;
+  opacity: 0.3;
+}
+.hv-member-text {
+  position: absolute;
+  color: white;
+  padding: 15px 30px;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  display: none;
+}
+
+/* ==========================================
+   Blog  
+   ========================================== */
+
+.hv-blog-banner {
+  background-color: black;
+  width: 100vw;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+.hv-blog-header {
+  @extend .scss-large-content-font;
+  color: white;
+  font-weight: 400;
+}
+.hv-blog {
+  height: 360px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+.hv-blog-image-wrapper {
+  overflow: hidden;
+  height: 100%;
+}
+.hv-blog-image { 
+  width: 100%;
+}
+.hv-blog-title {
+  font-weight: 700;
+  font-size: 3vw;
+}
+.hv-blog-post-wrapper {
+  position: relative;
+  height: 100%;
+}
+.hv-blog-post {
+  position: absolute !important;
+  top: 50%;
+  transform: translatey(-50%);
 }

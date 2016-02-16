@@ -56,11 +56,13 @@ keystone.set('locals', {
 keystone.set('routes', require('./routes'));
 
 // Configure the navigation bar in Keystone's Admin UI
-
+/*
+ * NOTE: below models use automated pluralization. (hence 'abouts'...)
+ */
 keystone.set('nav', {
 	'posts': ['posts', 'post-categories'],
 	'users': 'users',
-  'content': ['banners', 'case-studies'],
+  'content': ['banners', 'case-studies', 'abouts', 'services', 'members'], 
   'projects': 'projects',
   'links': 'links'
 });

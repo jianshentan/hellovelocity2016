@@ -22,13 +22,6 @@
                             missionContainer.width() : minWidth);
   })
 
-  // project color replace
-  $( ".hv-project-banner-bg" ).each( function() {
-    var primaryColor = $( this ).data( "color" );
-    var backgroundColor = $( this ).data( "bg-color" );
-    $( this ).css( "background-color", backgroundColor );
-  });
-
   // project banner image on hover
   $( ".hv-project-banner-bg" ).each( function() {
     var bannerImage = $( this ).find( ".hv-project-banner-image" );

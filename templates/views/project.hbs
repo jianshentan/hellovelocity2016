@@ -1,19 +1,18 @@
-<div class="hv-project-slideshow-wrapper">
+<div class="hv-project-slideshow-wrapper"
+  data-color="{{ data.project.primaryColor }}"
+  data-bg-color="{{ data.project.backgroundColor }}">
+
   <div class="container">
-    <div class="hv-project-title">{{ data.project.title }}{{ data.project.year }}</div>
-    <div class="hv-project-description">{{ data.project.pageDescription }}</div>
+    <div class="hv-project-title"
+      data-color="{{ data.project.primaryColor }}">
+      {{ data.project.title }}
+    </div>
+    <div class="hv-project-description"
+      data-color="{{ data.project.primaryColor }}">
+      {{ data.project.pageDescription }}
+    </div>
     <!-- Project Slides -->
     <div class="hv-project-slideshow">
-
-      <!-- Project Slides Navigation -->
-      <div class="hv-project-nav-container">
-        {{#each data.project.pageGallery}}
-        <div data-id="{{@index}}"
-          {{#if @first}}class="hv-project-nav active"
-          {{else}} class="hv-project-nav"
-          {{/if}}>{{inc @index}}</div>
-        {{/each}}
-      </div>
 
       <!-- Project Slides -->
       <div class="hv-project-slideshow">
@@ -25,9 +24,109 @@
         {{/each}}
       </div>
 
+      <!-- Project Slides Navigation -->
+      <div class="hv-project-nav-container">
+        {{#each data.project.pageGallery}}
+        <div data-id="{{@index}}"
+          data-border-color="{{ primaryColor }}"
+          {{#if @first}}class="hv-project-nav active"
+          {{else}} class="hv-project-nav"
+          {{/if}}>{{inc @index}}</div>
+        {{/each}}
+      </div>
+
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="hv-project-express col-xs-4 col-md-3">
+      <div class="hv-project-logo-wrapper" data-bg-color="{{ data.project.backgroundColor }}">
+        <img class="hv-project-logo" src="{{ data.project.pageLogo.url }}">
+      </div>
+      <br>
+      <div class="hv-project-logo-link" 
+        data-border-color="{{ data.project.backgroundColor }}"
+        data-color="{{ data.project.backgroundColor }}">
+        visit website &rarr;
+      </div>
+      <br>
+      <div class="hv-project-info">
+        <div class="hv-project-info-title">{{ data.project.title }}</div>
+        <div class="hv-project-info-year">{{ data.project.year }}</div>
+      </div>
+      
+    </div>
+    <div class="hv-project-content col-xs-8 col-md-9">
+      {{{ data.project.pageContent }}}
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="hv-project-share">
+    <div class="hv-project-share-label">
+      Share this project
+    </div>
+    <div class="hv-project-social-container">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.hellovelocity.com/bitelabs" target="_blank">
+        <div class="hv-project-social">
+          <div class="hv-project-social-icon">
+            <i class="fa fa-facebook fa"></i>
+          </div>
+          <div class="hv-project-social-label">
+            facebook
+          </div>
+        </div>
+      </a>
+      <a href="https://twitter.com/home?status=hellovelocity.com/bitelabs%20%40hellovelocity" target="_blank">
+        <div class="hv-project-social">
+          <div class="hv-project-social-icon">
+            <i class="fa fa-twitter fa"></i>
+          </div>
+          <div class="hv-project-social-label">
+            twitter 
+          </div>
+        </div>
+      </a>
+      <a href="https://plus.google.com/share?url=http://www.hellovelocity.com/bitelabs" target="_blank">
+        <div class="hv-project-social">
+          <div class="hv-project-social-icon">
+            <i class="fa fa-google-plus fa"></i>
+          </div>
+          <div class="hv-project-social-label">
+            google+ 
+          </div>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.hellovelocity.com/bitelabs&title=Hello%20Velocity&summary=&source=" target="_blank">
+        <div class="hv-project-social">
+          <div class="hv-project-social-icon">
+            <i class="fa fa-linkedin fa"></i>
+          </div>
+          <div class="hv-project-social-label">
+            linkedin 
+          </div>
+        </div>
+      </a>
+      <a href="mailto:?subject=Hello%20Velocity%20&body=http://www.hellovelocity.com/bitelabs" target="_blank">
+        <div class="hv-project-social">
+          <div class="hv-project-social-icon">
+            <i class="fa fa-envelope fa"></i>
+          </div>
+          <div class="hv-project-social-label">
+            email 
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="hv-project-share-link">
+      {{ data.project.projectLink }}
+    </div>
+  </div>
+</div>
+
 
 <!-- .js links -->
 <script src="/js/util.js"></script>
