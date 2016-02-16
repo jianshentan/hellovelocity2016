@@ -4,54 +4,60 @@
     <div class="hv-blog-header">What have we been <br><span style="font-weight: 700;">Thinking about?</span></div>
   </div>
 </div>
-<div class="container">
-	<div class="row">
-		<div class="col-sm-12 col-md-12 col-xs-12">
-		  {{# each data.posts.results}}
-      <!-- blog listing -->
-			<div class="hv-blog">
+<div class="hv-blog-posts">
+  
+  {{# each data.posts.results}}
+  <!-- blog listing -->
+  <a href="{{postUrl slug}}">
+    <div class="hv-blog">
+      <div class="container">
+        <div class="row">
+          <div class="hv-blog-post col-sm-12 col-md-12 col-xs-12">
 
-        <!-- blog image -->
-        <div class="hv-blog-image-wrapper col-sm-6 col-md-6 col-xs-6">
-          <img class="hv-blog-image" src="{{ image.url }}">
-        </div>
+            <!-- blog image -->
+            <div class="hv-blog-image-wrapper col-sm-6 col-md-6 col-xs-6">
+              <img class="hv-blog-image" src="{{ image.url }}">
+            </div>
 
-        <!-- blog text -->
-        <div class="col-sm-6 col-md-6 col-xs-6 hv-blog-post-wrapper">
-          <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post hv-blog-post">
+            <!-- blog text -->
+            <div class="col-sm-6 col-md-6 col-xs-6 hv-blog-post-wrapper">
+              <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post hv-blog-post-description">
 
-            <a href="{{postUrl slug}}">
-              <div class="hv-blog-title">{{{title}}}</div>
-            </a>
-            <p class="lead text-muted">
-              {{{categoryList categories prefix="Posted in "}}}
-              <!--{{#if author.name.first}}by {{author.name.first}}{{/if}}-->
-              {{#if publishedDate }} {{date publishedDate }} {{/if}}
-            </p>
-            <p>{{{content.brief}}}</p>
-            <p class="read-more"><a href="{{postUrl slug}}">Read more...</a></p>
+                <div class="hv-blog-title">{{{title}}}</div>
+                <p class="lead">
+                  {{{categoryList categories prefix="Posted in "}}}
+                  <!--{{#if author.name.first}}by {{author.name.first}}{{/if}}-->
+                  {{#if publishedDate }} {{date publishedDate }} {{/if}}
+                </p>
+                <p>{{{content.brief}}}</p>
+              </div>
+            </div>
+
           </div>
+
+
         </div>
+      </div>
+    </div>
+  </a>
+  <hr>
+  {{/each}}
 
-			</div>
+  <!--
+  <div class="col-sm-4 col-md-3">
+    <h2>Categories</h2>
+    <div style="margin-top: 70px;" class="list-group">
+      <a href="/blog" class="active list-group-item">All Categories</a>
+      {{# each data.categories }}
+      <a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
+      {{/each}}
+    </div>
+  </div>
+  -->
 
-      {{#unless  @last}}<hr>{{/unless}}
-
-		  {{/each}}
-		</div>
-
-    <!--
-		<div class="col-sm-4 col-md-3">
-			<h2>Categories</h2>
-			<div style="margin-top: 70px;" class="list-group">
-				<a href="/blog" class="active list-group-item">All Categories</a>
-				{{# each data.categories }}
-				<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
-				{{/each}}
-			</div>
-		</div>
-    -->
-
-	</div>
-	{{>pagination}}
+ {{>pagination}}
 </div>
+
+<!-- .js links -->
+<script src="/js/util.js"></script>
+<script src="/js/blog.js"></script>

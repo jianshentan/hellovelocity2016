@@ -16,7 +16,8 @@ About.add(
   "Banner",
   {
     title: { type: String, required: true },
-    bannerText: { type: String }
+    bannerText: { type: String },
+    bannerImage: { type: Types.CloudinaryImage }
   },
   "What We Do",
   {

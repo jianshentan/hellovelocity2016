@@ -525,12 +525,19 @@ body {
    ========================================== */
 
 .hv-about-banner {
-  background-image: url( "../images/about-image.png" );
   background-size: cover;
   width: 100%;
   min-height: 500px;
   max-height: 1000px;
   position: relative;
+  overflow: hidden;
+}
+.hv-about-banner-image {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
 }
 .hv-about-banner-text {
   @extend .scss-large-content-font;
@@ -693,12 +700,20 @@ body {
   left: 0px;
   z-index: 3;
   display: none;
+  font-size: 1.5em;
 }
 
 /* ==========================================
    Blog  
    ========================================== */
 
+.hv-blog-posts hr {
+  height: 3px;
+  background-color: $primary-color;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
 .hv-blog-banner {
   background-color: black;
   width: 100%;
@@ -711,14 +726,16 @@ body {
   font-weight: 400;
 }
 .hv-blog {
-  height: 30vw;
-  margin-top: 48px;
-  margin-bottom: 48px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  color: #555;
 }
-@media all and (max-width: $screen-xs-max) {
-  .hv-blog {
-    height: 280px;
-  }
+.hv-blog.hover {
+  background-color: $primary-color;
+  color: #eee;
+}
+.hv-blog-post {
+  height: 24vw;
 }
 .hv-blog-image-wrapper {
   overflow: hidden;
@@ -730,13 +747,73 @@ body {
 .hv-blog-title {
   font-weight: 700;
   font-size: 3vw;
+  color: inherit;
 }
 .hv-blog-post-wrapper {
   position: relative;
   height: 100%;
 }
-.hv-blog-post {
+.hv-blog-post-description {
   position: absolute !important;
   top: 50%;
   transform: translatey(-50%);
+}
+@media all and (max-width: $screen-xs-max) {
+  .hv-blog-title {
+    font-size: 24px;
+  }
+  .hv-blog-post {
+    height: 280px;
+  }
+}
+.hv-pagination {
+  text-align: center;
+}
+
+/* ========================================== 
+   Blog Post 
+   ========================================== */
+
+.hv-post-banner {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.hv-post-banner-image {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+.hv-post-banner-text {
+  @extend .scss-large-content-font;
+  z-index: 2;
+  color: white;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  bottom: 0px;
+}
+.hv-post hr {
+  height: 3px;
+  background-color: $primary-color;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+.hv-post-return {
+  margin: 24px 0;
+}
+.hv-post-return a {
+  color: $primary-color;
+}
+.hv-post {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+.hv-post article {
+  margin-bottom: 10vh;
+}
+.hv-post .post {
+  width: 100%;
 }
