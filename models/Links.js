@@ -7,6 +7,7 @@ var Types = keystone.Field.Types;
  */
 
 var Link = new keystone.List('Link', {
+  sortable: true,
 	map: { name: 'title' },
 	autokey: { path: 'slug', from: 'title', unique: true }
 });
