@@ -68,10 +68,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);;
+  color: white;
 }
 .hv-nav-link {
   color: white;
-  font-size: 4vw;
+  font-size: 2.4vw;
+  margin: 4vh auto;
 }
 
 /* Newsletter ------------------------------ */
@@ -396,11 +398,11 @@ body {
 }
 .hv-project-slideshow-wrapper {
   width: 100vw;
-  background-color: #ccc;
 }
 .hv-project-slideshow {
-  margin-top: 10vh;
+  margin-top: 8vh;
   position: relative;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
 }
 .hv-project-slide.active {
   display: block;
@@ -410,9 +412,11 @@ body {
   width: 100% ;
 }
 .hv-project-nav-container {
-  float: right;
-  margin-top: 12px;
-  margin-bottom: 10vh;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  margin-top: 18px;
+  text-align: center;
 }
 .hv-project-nav {
   border: 2px solid #ccc;
@@ -478,11 +482,9 @@ body {
 
 .hv-project-share {
   width: 100%;
-  background-color: $primary-color;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  margin: 0 auto 80px auto;
-  color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 0 auto 20px auto;
 }
 .hv-project-share-label {
   text-align: center;
@@ -500,18 +502,16 @@ body {
 .hv-project-social-icon {
   width: 60px;
   height: 60px;
-  background-color: $primary-color;
   font-size: 1.8em;
   text-align: center;
   line-height: 50px;
   border-radius: 45px;
-  border: 5px solid white;
+  border: 5px solid !important;
   color: white;
 }
 .hv-project-social-label {
   font-size: 1.0em;
   margin-top: 12px;
-  color: white;
 }
 .hv-project-share-link {
   font-size: 3.0em;
@@ -533,7 +533,6 @@ body {
   overflow: hidden;
 }
 .hv-about-banner-image {
-  width: 100%;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -700,8 +699,14 @@ body {
   left: 0px;
   z-index: 3;
   display: none;
-  font-size: 1.5em;
+  font-size: 1.5vw;
 }
+@media all and (max-width: $screen-xs-max) {
+  .hv-member-text {
+    font-size: 12px;
+  }
+}
+
 
 /* ==========================================
    Blog  

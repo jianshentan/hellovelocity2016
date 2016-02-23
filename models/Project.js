@@ -20,8 +20,8 @@ Project.add(
     state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
     author: { type: Types.Relationship, ref: 'User', index: true },
     publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
-    backgroundColor: { type: Types.Color },
     primaryColor: { type: Types.Color },
+    secondaryColor: { type: Types.Color },
     link: { type: Types.Url },
     projectLink: { type: Types.Url }
   },

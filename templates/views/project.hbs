@@ -1,16 +1,19 @@
 <div class="hv-project-slideshow-wrapper"
-  data-color="{{ data.project.primaryColor }}"
-  data-bg-color="{{ data.project.backgroundColor }}">
+  data-color="{{ data.project.secondaryColor }}"
+  data-border-bottom-color="{{ data.project.secondaryColor }}">
 
   <div class="container">
+
     <div class="hv-project-title"
-      data-color="{{ data.project.primaryColor }}">
+      data-color="{{ data.project.secondaryColor }}">
       {{ data.project.title }}
     </div>
+
     <div class="hv-project-description"
-      data-color="{{ data.project.primaryColor }}">
+      data-color="{{ data.project.secondaryColor }}">
       {{ data.project.pageDescription }}
     </div>
+    
     <!-- Project Slides -->
     <div class="hv-project-slideshow">
 
@@ -23,32 +26,32 @@
           {{/if}}/>
         {{/each}}
       </div>
-
-      <!-- Project Slides Navigation -->
-      <div class="hv-project-nav-container">
-        {{#each data.project.pageGallery}}
-        <div data-id="{{@index}}"
-          data-border-color="{{ primaryColor }}"
-          {{#if @first}}class="hv-project-nav active"
-          {{else}} class="hv-project-nav"
-          {{/if}}>{{inc @index}}</div>
-        {{/each}}
-      </div>
-
     </div>
+
+    <!-- Project Slides Navigation -->
+    <div class="hv-project-nav-container">
+      {{#each data.project.pageGallery}}
+      <div data-id="{{@index}}"
+        data-border-color="{{ secondaryColor }}"
+        {{#if @first}}class="hv-project-nav active"
+        {{else}} class="hv-project-nav"
+        {{/if}}>{{inc @index}}</div>
+      {{/each}}
+    </div>
+
   </div>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="hv-project-express col-xs-4 col-md-3">
-      <div class="hv-project-logo-wrapper" data-bg-color="{{ data.project.backgroundColor }}">
+      <div class="hv-project-logo-wrapper" data-bg-color="{{ data.project.secondaryColor }}">
         <img class="hv-project-logo" src="{{ data.project.pageLogo.url }}">
       </div>
       <br>
       <div class="hv-project-logo-link" 
-        data-border-color="{{ data.project.backgroundColor }}"
-        data-color="{{ data.project.backgroundColor }}">
+        data-border-color="{{ data.project.secondaryColor }}"
+        data-color="{{ data.project.secondaryColor }}">
         visit website &rarr;
       </div>
       <br>
@@ -64,65 +67,68 @@
   </div>
 </div>
 
+<hr data-border-bottom-color="{{ data.project.secondaryColor }}" >
+
 <div class="container">
-  <div class="hv-project-share">
+  <div class="hv-project-share"
+    data-color="{{ data.project.secondaryColor }}">
     <div class="hv-project-share-label">
       Share this project
     </div>
     <div class="hv-project-social-container">
       <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.hellovelocity.com/bitelabs" target="_blank">
         <div class="hv-project-social">
-          <div class="hv-project-social-icon">
+          <div class="hv-project-social-icon" data-color="{{ data.project.secondaryColor }}">
             <i class="fa fa-facebook fa"></i>
           </div>
-          <div class="hv-project-social-label">
+          <div class="hv-project-social-label" data-color="{{ data.project.secondaryColor }}">
             facebook
           </div>
         </div>
       </a>
       <a href="https://twitter.com/home?status=hellovelocity.com/bitelabs%20%40hellovelocity" target="_blank">
         <div class="hv-project-social">
-          <div class="hv-project-social-icon">
+          <div class="hv-project-social-icon" data-color="{{ data.project.secondaryColor }}">
             <i class="fa fa-twitter fa"></i>
           </div>
-          <div class="hv-project-social-label">
+          <div class="hv-project-social-label" data-color="{{ data.project.secondaryColor }}">
             twitter 
           </div>
         </div>
       </a>
       <a href="https://plus.google.com/share?url=http://www.hellovelocity.com/bitelabs" target="_blank">
         <div class="hv-project-social">
-          <div class="hv-project-social-icon">
+          <div class="hv-project-social-icon" data-color="{{ data.project.secondaryColor }}">
             <i class="fa fa-google-plus fa"></i>
           </div>
-          <div class="hv-project-social-label">
+          <div class="hv-project-social-label" data-color="{{ data.project.secondaryColor }}">
             google+ 
           </div>
         </div>
       </a>
       <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.hellovelocity.com/bitelabs&title=Hello%20Velocity&summary=&source=" target="_blank">
         <div class="hv-project-social">
-          <div class="hv-project-social-icon">
+          <div class="hv-project-social-icon" data-color="{{ data.project.secondaryColor }}">
             <i class="fa fa-linkedin fa"></i>
           </div>
-          <div class="hv-project-social-label">
+          <div class="hv-project-social-label" data-color="{{ data.project.secondaryColor }}">
             linkedin 
           </div>
         </div>
       </a>
       <a href="mailto:?subject=Hello%20Velocity%20&body=http://www.hellovelocity.com/bitelabs" target="_blank">
         <div class="hv-project-social">
-          <div class="hv-project-social-icon">
+          <div class="hv-project-social-icon" data-color="{{ data.project.secondaryColor }}">
             <i class="fa fa-envelope fa"></i>
           </div>
-          <div class="hv-project-social-label">
+          <div class="hv-project-social-label" data-color="{{ data.project.secondaryColor }}">
             email 
           </div>
         </div>
       </a>
     </div>
     <div class="hv-project-share-link">
-      {{ data.project.projectLink }}
+      www.hellovelocity.com{{ data.project.projectLink }}
     </div>
   </div>
 </div>

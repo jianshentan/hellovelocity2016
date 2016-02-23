@@ -45,6 +45,11 @@ var hvUtil = (function() {
     $( this ).css( "border", "2px solid " + borderColor );
   });
 
+  $( "*[data-border-bottom-color]" ).each( function() {
+    var borderColor = $( this ).data( "border-bottom-color" );
+    $( this ).css( "border-bottom", "3px solid " + borderColor );
+  });
+
   return { slideshow }
 
 })();
