@@ -9,13 +9,21 @@ exports = module.exports = function(req, res) {
 	// item in the header navigation.
 	locals.section = 'home';
 
+  if (req.route.path == '/projects' ) {
+    locals.section = 'projects';
+  }
+
   // Load banners by sortOrder
-	view.query('banners', keystone.list('Banner').model.find().sort('sortOrder'));
+  view.query('banners', keystone.list('Banner').model.find().sort('sortOrder'));
   view.query('case-studies', keystone.list('CaseStudy').model.find().sort('sortOrder'));
-	view.query('projects', keystone.list('Project').model.find().sort('sortOrder'));
-	//view.query('links', keystone.list('Link').model.find().sort('sortOrder'));
-	
-	// Render the view
-	view.render('index');
+  view.query('projects', keystone.list('Project').model.find().sort('sortOrder'));
+    
+
+  // Render the view
+  if( req.isMobile ) {
+    view.render('mindex');
+  } else {
+    view.render('index');
+  }
 	
 };

@@ -80,7 +80,10 @@ exports = module.exports = function(req, res) {
 		
 	});
 	
-	// Render the view
-	view.render('blog');
-	
+  // Render the view
+  if( req.isMobile ) {
+    view.render('mblog');
+  } else {
+	  view.render('blog');
+  }
 };

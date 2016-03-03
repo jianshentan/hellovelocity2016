@@ -1,0 +1,56 @@
+<!-- FOOTER --> 
+<div class="hv-footer">
+
+  <!-- Newsletter -->
+  <div class="hv-newsletter">
+    <div class="container">
+      <div class="hv-newsletter-wrapper">
+        <div class="hv-newsletter-prompt">Keep up with our newsletter:</div>
+
+        <!-- Begin MailChimp Signup Form -->
+
+        <div id="mc_embed_signup">
+          <form action="//hellovelocity.us1.list-manage.com/subscribe/post?u=f6165db2f72795931525c002b&amp;id=32a1e86aff" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" autocomplete="off" novalidate>
+              <div id="mc_embed_signup_scroll">
+            
+          <div class="mc-field-group hv-newsletter-form">
+            <input type="email" value="" name="EMAIL" class="hv-newsletter-input required email" id="mce-EMAIL" placeholder="your@email.address">
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="hv-newsletter-submit button">
+          </div>
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f6165db2f72795931525c002b_32a1e86aff" tabindex="-1" value=""></div>
+              </div>
+          </form>
+        </div>
+
+        <!--End mc_embed_signup--> 
+
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="hv-footer-information">
+    <div class="container">
+      <div class="hv-footer-copyright">
+        &#169; Hello Velocity 
+      </div>
+
+      <div class="hv-footer-links-wrapper">
+        {{#each links}}
+        {{#if footer }}
+        <div class="hv-footer-link">
+          <a href="{{ url }}">{{ title }}</a>
+        </div>
+        {{/if}}
+        {{/each}}
+      </div>
+
+    </div>
+  </div>
+
+</div>
+

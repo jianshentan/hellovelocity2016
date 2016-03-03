@@ -3,7 +3,7 @@
 {{#if @first}}
 
 <div class="hv-about-banner">
-  <div class="container">
+  <div class="hvm-container">
     <div class="hv-about-banner-text">
       {{ bannerText }}
     </div>
@@ -11,14 +11,14 @@
   <img class="hv-about-banner-image" src="{{ bannerImage.url }}"/>
 </div>
 
-<div class="container">
+<div class="hvm-container">
   <div class="hv-services">
     <div class="hv-services-heading">
       What do we do?
     </div>
-    <div class="hv-service-wrapper row">
+    <div class="hv-service-wrapper">
       {{#each services}}
-      <div class="hv-service col-md-6 col-xs-6">
+      <div class="hv-service">
         <div class="hv-service-text">
           <div class="hv-service-text-title">{{ this.name }}</div>
           <div class="hv-service-text-description">
@@ -36,43 +36,44 @@
 </div>
 
 <div class="hv-about-description">
-  <div class="container">
+  <div class="hvm-container">
     <div class="hv-about-description-text">
       {{{ descriptionText }}}
     </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="hv-contact row">
-    <a href="http://www.instagram.com/{{ instagramHandle }}" target="_blank"><div class="hv-contact-instagram col-md-6 col-xs-6">
-      <img class="hv-contact-instagram-image" src="{{ instagram.url }}" >
-      <div class="hv-contact-instagram-overlay"></div>
-      <div class="hv-contact-instagram-button">
-        <div class="hv-contact-instagram-icon"><i class="fa fa-instagram"></i></div>
-        <div class="hv-contact-handle">@{{ instagramHandle }}</div>
-      </div>
-    </div></a>
-    <div class="hv-contact-text col-md-6 col-xs-6">
-      <div class="hv-contact-text-wrapper">
-        <div class="scss-large-content-font a">Hit us up</div>
-        <div class="b"><a href="mailto:friend@hellovelocity.com" target="_blank">friend@hellovelocity.com</a></div>
-        <br><br>
-        <div class="c">We're at NewInc</div>
-        <div class="d">231 Bowery St<br />Manhattan, NY 11001</div>
+<div class="hvm-contact-wrapper">
+  <div class="hvm-container">
+    <div class="hv-contact">
+      <a href="http://www.instagram.com/{{ instagramHandle }}" target="_blank"><div class="hv-contact-instagram">
+        <img class="hv-contact-instagram-image" src="{{ instagram.url }}" >
+        <div class="hv-contact-instagram-overlay"></div>
+        <div class="hv-contact-instagram-button">
+          <div class="hv-contact-instagram-icon"><i class="fa fa-instagram"></i></div>
+          <div class="hv-contact-handle">@{{ instagramHandle }}</div>
+        </div>
+      </div></a>
+      <div class="hv-contact-text">
+        <div class="hv-contact-text-wrapper">
+          <div class="scss-large-content-font a">Hit us up</div>
+          <div class="b"><a href="mailto:friend@hellovelocity.com" target="_blank">friend@hellovelocity.com</a></div>
+          <div class="c">We're at NewInc</div>
+          <div class="d">231 Bowery St<br />Manhattan, NY 11001</div>
+
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <div class="hv-team">
-  <div class="container">
+  <div class="hvm-container">
     <div class="hv-team-heading">Founder Selfies</div>
-    <div class="hv-members row">
+    <div class="hv-members">
       {{#each members}}
-      <div class="hv-member col-md-4 col-xs-4">
+      <div class="hv-member">
         <img class="hv-member-image" src="{{ this.image.url }}">
-        <div class="hv-member-overlay"></div>
         <div class="hv-member-text">{{{ this.description }}}</div>
       </div>
       {{/each}}

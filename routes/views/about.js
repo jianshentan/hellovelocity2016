@@ -14,6 +14,10 @@ exports = module.exports = function(req, res) {
                                .populate('members'));
 	
   // Render the view
-	view.render('about');
-	
+  if( req.isMobile ) {
+    view.render('mabout');
+  } else {
+    view.render('about');
+  }
+
 };

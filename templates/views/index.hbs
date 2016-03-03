@@ -41,9 +41,9 @@
     </div>
     <div class="hv-art-mission">
       We create experimental brands<br>
-      that explore how companies<br> 
-      and individuals are expressing<br>
-      themselves on the web
+      that explore new ways for <br> 
+      companies and individuals to <br>
+      express themselves on the web
     </div>
     <!-- offset height since contents are absolute positioned -->
     <br><br><br><br>
@@ -72,7 +72,7 @@
 </div>
 
 <!-- Project Banner Grid -->
-<div class="container">
+<div class="container" id="hv-projects">
   <div class="hv-projects-heading">Explore our projects and see how we bring ideas to life!</div>
   <div class="hv-projects-banners row row-eq-height">
     {{#each projects}}
@@ -107,8 +107,15 @@
   </div>
 </div>
 
-
 <!-- .js link -->
+<script>var isMobile = false</script>
 <script src="/js/util.js"></script>
 <script src="/js/index.js"></script>
 
+{{#ifeq section "projects" }}
+<script>
+  $( document ).ready( function() {
+    $( window ).scrollTop( $( "#hv-projects" ).offset().top + 24);
+  });
+</script>
+{{/ifeq}}

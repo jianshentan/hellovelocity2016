@@ -21,7 +21,8 @@ CaseStudy.add({
   logo: { type: Types.CloudinaryImage },
   catchPhrase: { type: String },
   actionLink: { type: Types.Url },
-	backgroundImage: { type: Types.CloudinaryImage }
+	backgroundImage: { type: Types.CloudinaryImage },
+  mobileBackgroundImage: { type: Types.CloudinaryImage }
 });
 
 CaseStudy.track = true;

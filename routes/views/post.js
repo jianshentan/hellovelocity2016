@@ -42,6 +42,10 @@ exports = module.exports = function(req, res) {
 	});
 	
 	// Render the view
-	view.render('post');
+  if( req.isMobile ) {
+	  view.render('mpost');
+  } else {
+	  view.render('post');
+  }
 	
 };

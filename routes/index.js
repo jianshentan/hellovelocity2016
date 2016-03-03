@@ -26,6 +26,7 @@ var importRoutes = keystone.importer(__dirname);
 keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
 keystone.pre('routes', middleware.loadLinks);
+keystone.pre('routes', middleware.checkMobile);
 
 // Import Route Controllers
 var routes = {
@@ -37,10 +38,11 @@ exports = module.exports = function(app) {
 	
 	// Views
 	app.get('/', routes.views.index);
+	app.get('/projects', routes.views.index);
   app.get('/about', routes.views.about);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/post/:post', routes.views.post);
-  app.get('/:project', routes.views.project);
+  app.get('/project/:project', routes.views.project);
 	
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

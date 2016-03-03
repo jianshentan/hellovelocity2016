@@ -1,0 +1,36 @@
+<div class="hv-blog-filler">
+  <div class="hvm-container">
+    Blog
+  </div>
+</div>
+
+
+<div class="hv-post-banner">
+  <div class="hvm-container">
+    <div class="hv-post-banner-text">{{{ data.post.bannerText }}}</div>
+  </div>
+  <img class="hv-post-banner-image" src="{{ data.post.bannerImage.url }}"/>
+</div>
+
+<div class="hvm-container">
+	<div class="hv-post">
+		<div class="">
+			<article>
+        
+				<header>
+					<h5>
+						{{{categoryList data.post.categories prefix="Posted in "}}}
+						{{#if author.name.first}}by {{author.name.first}}{{/if}}
+					</h5>
+				</header>
+				<div class="post">
+					{{{data.post.content.extended}}}
+				</div>
+
+			</article>
+
+			<hr>
+      <div class="hv-post-return"><a href="/blog">&larr; back to the blog</a></div>
+		</div>
+	</div>
+</div>

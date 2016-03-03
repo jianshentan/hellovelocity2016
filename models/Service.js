@@ -13,6 +13,7 @@ var Service = new keystone.List('Service', {
 
 Service.add({
 	name: { type: String, required: true },
+	description: { type: String },
 	image: { type: Types.CloudinaryImage }
 });
 

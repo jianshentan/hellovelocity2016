@@ -19,6 +19,7 @@ Banner.add({
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	publishedDate: { type: Types.Date, index: true },
 	image: { type: Types.CloudinaryImage },
+  mobileImage: { type: Types.CloudinaryImage },
   display: { type: Types.Boolean, default: true }
 });
 

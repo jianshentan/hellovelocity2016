@@ -1,0 +1,412 @@
+/* Sass variables and Classes -------------- */
+.scss-large-content-font {
+  font-size: 8vw;
+}
+.hvm-container {
+  width: 90vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+body {
+  min-width: inherit;
+}
+.hv-nav-expanded .hv-nav-link {
+  font-size: 8vw;
+}
+
+/* ========================================== 
+   Banner 
+   ========================================== */
+
+.hv-banners {
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 100vw;
+  height: 90vh;
+  margin-bottom: inherit;
+}
+.hv-banner-container {
+  overflow: hidden;
+  height: 100%;
+}
+.hv-banner {
+  max-height: inherit;
+  height: 100%;
+  width: inherit;
+  transform: translateX(-50%);
+  margin-left: 50%;
+}
+.hv-banner-nav-container {
+  float: inherit;
+  margin: 0px;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  position: absolute;
+  top: 0px;
+  right: 3vw;
+}
+.hv-banner-nav.active {
+  background-color: $primary-color;
+}
+.hv-banner-nav {
+  background-color: white;
+  border: 2px solid white;
+  width: 10vw;
+  height: 10vw;
+  line-height: 9vw;
+  font-size: 4vw;
+  border-radius: 10vw;
+  margin-left: 4vw;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+
+/* ========================================== 
+   Footer 
+   ========================================== */
+
+.hv-footer-information,
+.hv-newsletter {
+  height: inherit;
+  width: 100vw;
+}
+.hv-newsletter-wrapper {
+  position: inherit;
+  top: inherit;
+  transform: inherit;
+  padding-top: 4vw;
+  padding-bottom: 6vw;
+}
+.hv-newsletter-submit {
+  text-align: center;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5vw;
+  padding: 1vw 2vw;
+}
+.hv-footer-information {
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+.hv-footer-links-wrapper ,
+.hv-footer-copyright {
+  display: inherit;
+  float: inherit;
+  text-align: center;
+  line-height: 10vw;
+}
+.hv-footer-link {
+  line-height: inherit;
+}
+
+/* ========================================== 
+   Main page - mission statements 
+   ========================================== */
+
+.hv-mission {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.hv-art-mission,
+.hv-commercial-mission {
+  @extend .scss-large-content-font;
+  font-size: 6.5vw;
+  position: relative; 
+  white-space: inherit;
+  overflow: inherit;
+  text-overflow: inherit;
+  width: inheirt;
+}
+.hvm-mission-learn-more {
+  background-color: $primary-color;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 3vw;
+  font-size: 5vw;
+}
+
+/* ========================================== 
+   Main page - Casestudy 
+   ========================================== */
+
+.hv-case-study {
+  min-width: inherit;
+}
+.hv-case-study-img {
+  left: inherit;
+  margin-left: 50%;
+  min-width: inherit;
+  transform: translateX(-50%);
+}
+
+/* ========================================== 
+   Main page - projects 
+   ========================================== */
+
+.hvm-projects-filler {
+  width:  100%;
+  height: 70px;
+  background: blue;
+  text-align: right;
+  line-height: 70px;
+  color: white;
+  padding-right: 15px;
+  font-size: 5vw;
+}
+.hvm-projects-filler a {
+  color: white;
+}
+.hv-project-banner-bg {
+  overflow: hidden;
+}
+.hv-project-banner-image-wrapper {
+  position: inherit;
+  top: inherit;
+}
+.hv-projects-heading {
+  min-width: inherit;
+  font-size: 8vw;
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+}
+.hv-project-banner-description {
+  top: 45%;
+}
+.hvm-project-banner-learn-more {
+  padding: 10px 20px;
+  background-color: white;
+  width: 68%;
+  font-size: 0.7em;
+  margin: 0 auto;
+}
+
+/* ========================================== 
+   About page
+   ========================================== */
+
+.hv-about-banner {
+  width: 100vw;
+  min-height: inherit;
+  max-height: inherit;
+}
+.hv-about-banner-text {
+  margin-top: 70px + 36px;
+  margin-bottom: 36px;
+  font-size: 7.5vw;
+}
+.hv-service-wrapper {
+  padding-right: inherit;
+}
+.hv-service-text {
+  padding-right: inherit;
+  font-size: 6vw;
+}
+.hv-serivce-text-description {
+  font-size: 4.5vw;
+}
+.hv-service-overlay {
+  opacity: 0.6;
+}
+.hv-about-description {
+  font-size: 6vw;
+  background-color: white;
+  color: $primary-color;
+  border-top: 3px solid $primary-color;
+}
+.hvm-contact-wrapper {
+  background-color: $primary-color;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  text-align: center;
+} 
+.hvm-contact-wrapper .hvm-container {
+  background-color: white;
+}
+.hv-contact-text-wrapper > div {
+  font-size: 0.8em;
+}
+.hv-contact-text-wrapper {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-top: inherit;
+  transform: inherit;
+}
+.hv-contact-text-wrapper .a {
+  font-size: 10vw;
+}
+.hv-contact-text-wrapper .b ,
+.hv-contact-text-wrapper .d {
+  font-size: 4vw;
+  color: #555;
+}
+.hv-contact-text-wrapper .c {
+  font-size: 8vw;
+  color: #555;
+  margin-top: 24px;
+}
+.hv-services-heading {
+  margin-top: 4vh;
+}
+.hv-contact {
+  margin-top: inherit;
+}
+.hv-team {
+  background-color: white;
+}
+.hv-team-heading {
+  color: $primary-color;
+}
+.hv-members {
+  margin-top: 24px;
+}
+.hv-member {
+  margin-bottom: 24px;
+  position: relative;
+}
+.hv-member-image {
+}
+.hv-member-text {
+  color: #555;
+  display: block;
+  padding: 12px 24px 24px 24px;
+  position: relative;
+  font-size: 4vw;
+  background-color: #eee;
+  padding-top: 24px;
+}
+
+/* ========================================== 
+   Blog page
+   ========================================== */
+
+.hv-blog-filler {
+  background-color: $primary-color;
+  color: white;
+  height: 70px;
+  width: 100%;
+  @extend .scss-large-content-font;
+  text-align: right;
+  line-height: 70px;
+}
+.hv-blog-banner {
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+}
+.hv-blog {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.hv-blog-post {
+  height: inherit;
+}
+.hv-blog-post-description {
+  position: relative !important;
+  top: inherit;
+  transform: inherit;
+}
+.hv-blog-title {
+  margin-top: 12px;
+}
+.hv-blog-button {
+  padding: 10px 20px;
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+.hv-blog-post-wrapper .lead {
+  margin-bottom: 12px;
+}
+
+/* ========================================== 
+   Blog Post page
+   ========================================== */
+
+.hv-post {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.hv-post-banner-image {
+  width: inherit;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.hv-post-banner .hvm-container {
+  margin-top: 40px;
+}
+.hv-post-banner-text {
+  padding-top: 12px;
+  padding-bottom: 18px;
+}
+.hv-post img {
+  width: 100%;
+}
+
+/* ========================================== 
+   Project page
+   ========================================== */
+
+.hv-project-slideshow-wrapper {
+  width: 100vw;
+  min-width: inherit;
+}
+.hv-project-title {
+  font-size: 8vw;  
+}
+.hv-project-description {
+  font-size: 4vw;  
+}
+.hv-project-content {
+  margin-top: 24px;
+  margin-bottom: inherit;;
+}
+.hv-project-logo-wrapper {
+  margin-top: 36px;
+}
+.hv-project-express {
+  padding-top: 36px;
+  padding-bottom: 36px;
+  margin-top: inherit;
+  margin-bottom: inherit;
+  border-bottom: 3px solid #555;
+  background-color: #eee;
+}
+.hv-project-express > .hvm-container {
+  width: 60%;
+  margin: 0 auto;
+}
+.hv-project-logo-wrapper {
+  margin-top: 0px;
+}
+.hv-project-logo-wrapper img {
+  width: 100%;
+} 
+.hv-project-logo-link {
+  background-color: white;
+}
+.hv-project-slideshow {
+  margin-top: inherit;
+}
+.hv-project-nav-container {
+  padding: 0px;
+}
+.hv-project-share-link {
+  font-size: 4.5vw;
+}
+.hv-project-social {
+  margin: 2vw;
+}
+.hv-project-social-icon {
+  width: 12vw;
+  height: 12vw;
+  line-height: 10vw;
+  font-size: 5vw;
+  text-align: center;
+  border-radius: 45px;
+  border: 3px solid !important;
+}
+.hv-project-social-label{
+  font-size: 3vw;
+}
