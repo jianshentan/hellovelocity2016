@@ -106,8 +106,28 @@ body {
 .hv-mission {
   margin-top: 5vh;
   margin-bottom: 5vh;
+  position: relative;
 }
-
+.hv-mission-and {
+  @extend .scss-large-content-font;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  background-color: white;
+  color: $primary-color;
+}
+.hv-mission hr {
+  border: 0px;
+  height: 3px;
+  background-color: $primary-color;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.hv-art-mission {
+  text-align: left;
+}
 .hv-art-mission,
 .hv-commercial-mission {
   @extend .scss-large-content-font;
@@ -116,7 +136,7 @@ body {
   white-space: inherit;
   overflow: inherit;
   text-overflow: inherit;
-  width: inheirt;
+  width: inherit;
 }
 .hvm-mission-learn-more {
   background-color: $primary-color;
@@ -360,7 +380,8 @@ body {
 }
 .hv-project-content {
   margin-top: 24px;
-  margin-bottom: inherit;;
+  margin-bottom: inherit;
+  padding-bottom: 24px;
 }
 .hv-project-logo-wrapper {
   margin-top: 36px;
