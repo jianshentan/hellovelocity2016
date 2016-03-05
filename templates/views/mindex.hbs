@@ -73,8 +73,7 @@
 
     <div class="hv-project-banner-wrapper" >
       <div class="hv-project-banner-bg"
-        data-color="{{ primaryColor }}" 
-        data-bg-color="{{ secondaryColor }}">
+        data-bg-color="{{ bannerBackgroundColor }}">
 
         <div class="hv-project-banner-header">
           <img src="{{ bannerLogo.url }}" class="hv-project-banner-header-logo">
@@ -84,7 +83,7 @@
         </div>
 
         <div class="hv-project-banner-content">
-          <div class="hv-project-banner-description">
+          <div class="hv-project-banner-description" data-color="{{ bannerTextColor }}">
             {{ bannerDescription }}
             <br><br>
             <a href="{{ projectLink }}">

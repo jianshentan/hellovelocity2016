@@ -367,7 +367,6 @@ body {
   position: absolute;
   width: 100%;
   top: 0px;
-  color: white;
 }
 .hv-project-banner-description {
   padding:10%;
@@ -414,7 +413,7 @@ body {
 .hv-project-slideshow {
   margin-top: 8vh;
   position: relative;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
 }
 .hv-project-slide.active {
   display: block;
@@ -464,6 +463,18 @@ body {
 .hv-project-content iframe {
   max-width: 100%;
 }
+.hv-project-content h1 {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+}
+.hv-project-content {
+  line-height: 1.5em;
+  font-size: 1.1em;
+  color: #333;
+}
+.hv-project-content p {
+  margin-bottom: 20px;
+}
 @media all and (max-width: $screen-xs-max) {
   .hv-project-express ,
   .hv-project-content {
@@ -481,6 +492,9 @@ body {
   padding-top: 8px;
   padding-bottom: 8px;
 
+}
+.hv-project-logo {
+  width: 100%;
 }
 .hv-project-info-title {
   font-weight: 700;

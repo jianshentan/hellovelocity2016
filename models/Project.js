@@ -29,7 +29,9 @@ Project.add(
   {
     bannerDescription: { type: String },
 		bannerImage: { type: Types.CloudinaryImage },
-    bannerLogo: { type: Types.CloudinaryImage } 
+    bannerLogo: { type: Types.CloudinaryImage },
+    bannerBackgroundColor: { type: Types.Color },
+    bannerTextColor: { type: Types.Color }
   },
   "Page",
   {
