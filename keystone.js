@@ -32,7 +32,10 @@ keystone.init({
 	'auto update': true,
 	'session': true,
 	'auth': true,
-	'user model': 'User'
+	'user model': 'User',
+
+  'mongo': 'mongodb://localhost:27017/hellovelocity_2016' || 'mongodb://js:jsmik3yD@ds064628.mlab.com:64628/hv16'
+
 
 });
 
