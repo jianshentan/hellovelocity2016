@@ -34,9 +34,7 @@ keystone.init({
 	'auth': true,
 	'user model': 'User',
 
-  'mongo': 'mongodb://js:jsmik3yD@ds064628.mlab.com:64628/hv16'
-  //'mongo': 'mongodb://localhost:27017/hellovelocity_2016'
-
+  'mongo': process.env.MONGO_URL
 });
 
 // Load your project's Models
