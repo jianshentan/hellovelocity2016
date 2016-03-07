@@ -12,8 +12,8 @@ var handlebars = require('express-handlebars');
 
 keystone.init({
 
-	'name': 'hellovelocity_2016',
-	'brand': 'hellovelocity_2016',
+	'name': 'Hello Velocity',
+	'brand': 'Hello Velocity',
 	
 	'sass': 'public',
 	'static': 'public',
