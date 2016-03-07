@@ -6261,6 +6261,9 @@ body {
   margin-top: 0px !important;
   font-weight: 700 !important; }
 
+.hv-project-content p {
+  margin-bottom: 20px; }
+
 .hv-project-content {
   line-height: 1.6em;
   font-size: 1.2em;

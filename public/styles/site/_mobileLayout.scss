@@ -309,6 +309,7 @@ body {
   @extend .scss-large-content-font;
   text-align: right;
   line-height: 70px;
+  font-size: 6vw !important;
 }
 .hv-blog-banner {
   padding-top: 6vh;
@@ -382,6 +383,9 @@ body {
   margin-top: 24px;
   margin-bottom: inherit;
   padding-bottom: 24px;
+}
+.hv-project-content h1 {
+  font-size: 5.5vw;
 }
 .hv-project-logo-wrapper {
   margin-top: 36px;
