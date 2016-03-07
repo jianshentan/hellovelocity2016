@@ -467,6 +467,7 @@ body {
   font-size: 1.8em;
   margin-bottom: 20px;
   margin-top: 0px !important;
+  font-weight: 700;
 }
 .hv-project-content {
   line-height: 1.6em;
@@ -658,7 +659,7 @@ body {
 @media screen and (min-width: $screen-lg-min) {
   .hv-about-description,
   .hv-service-text {
-    font-size: 48px;
+    font-size: 44px;
   }
 }
 
