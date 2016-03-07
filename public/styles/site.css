@@ -6675,3 +6675,21 @@ body {
 
 .hv-post .post {
   width: 100%; }
+
+.hv-post img,
+.hv-post iframe {
+  max-width: 100%; }
+
+.hv-post h1 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  margin-top: 0px !important;
+  font-weight: 700 !important; }
+
+.hv-post p {
+  margin-bottom: 20px; }
+
+.hv-post {
+  line-height: 1.6em;
+  font-size: 1.2em;
+  color: #333; }

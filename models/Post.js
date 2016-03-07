@@ -21,16 +21,16 @@ Post.add(
   },
   "Banner", 
   {
-    bannerText: { type: Types.Html, wysiwyg: true, height: 200 },
+    bannerText: { type: Types.Html, wysiwyg: true, height: 50 },
     bannerImage: { type: Types.CloudinaryImage },
   },
   "Content",
   {
-    image: { type: Types.CloudinaryImage },
-    gallery: { type: Types.CloudinaryImages },
+    image: { type: Types.CloudinaryImage, label: "Blog Thumbnail Image (used in /blog)" },
+    gallery: { type: Types.CloudinaryImages, label: "Images for the content of the post page" },
     content: {
-      brief: { type: Types.Html, wysiwyg: true, height: 150 },
-      extended: { type: Types.Html, wysiwyg: true, height: 600 }
+      brief: { type: Types.Html, wysiwyg: true, height: 100, label: "Blog Thumbnail description text" },
+      extended: { type: Types.Html, wysiwyg: true, height: 600, label: "Main blog text" }
     },
   },
   "Categories",

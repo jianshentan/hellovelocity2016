@@ -6679,6 +6679,24 @@ body {
 .hv-post .post {
   width: 100%; }
 
+.hv-post img,
+.hv-post iframe {
+  max-width: 100%; }
+
+.hv-post h1 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  margin-top: 0px !important;
+  font-weight: 700 !important; }
+
+.hv-post p {
+  margin-bottom: 20px; }
+
+.hv-post {
+  line-height: 1.6em;
+  font-size: 1.2em;
+  color: #333; }
+
 /* Sass variables and Classes -------------- */
 .scss-large-content-font, .hv-newsletter, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
 .hv-commercial-mission, .hv-blog-filler {
@@ -7023,6 +7041,9 @@ body {
 
 .hv-post img {
   width: 100%; }
+
+.hv-project-content h1 {
+  font-size: 5.5vw; }
 
 /* ========================================== 
    Project page
