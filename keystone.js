@@ -34,6 +34,8 @@ keystone.init({
 	'auth': true,
 	'user model': 'User',
 
+  'wysiwyg additional buttons': 'fontsizeselect fontselect image removeformat spellchecker forefolor backcolor forecolorpicker backcolorpicker',
+
   'mongo': process.env.MONGO_URL
 });
 
