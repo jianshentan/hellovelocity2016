@@ -6259,12 +6259,13 @@ body {
   max-width: 100%; }
 
 .hv-project-content h1 {
-  font-size: 1.6em;
-  margin-bottom: 20px; }
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  margin-top: 0px !important; }
 
 .hv-project-content {
-  line-height: 1.5em;
-  font-size: 1.1em;
+  line-height: 1.6em;
+  font-size: 1.2em;
   color: #333; }
 
 .hv-project-content p {
