@@ -40,6 +40,7 @@ exports = module.exports = function(app) {
 	app.get('/', routes.views.index);
 	app.get('/projects', routes.views.index);
   app.get('/about', routes.views.about);
+  app.get('/fb-banner', routes.views.fbBanner);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/post/:post', routes.views.post);
   app.get('/project/:project', routes.views.project);

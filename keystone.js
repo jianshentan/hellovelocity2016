@@ -65,6 +65,7 @@ keystone.set('nav', {
 	'users': 'users',
   'content': ['banners', 'case-studies', 'abouts', 'services', 'members'], 
   'projects': 'projects',
+  'social': 'fb-banners',
   'links': 'links'
 });
 
