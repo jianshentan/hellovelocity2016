@@ -2,11 +2,6 @@ var globals = [isMobile];
 
 (function(globals) {
 
-  // Loader
-  $( window ).load( function() {
-    $( ".hv-loading-overlay" ).fadeOut();
-  });
-
   // banner navigation 
   hvUtil.slideshow( ".hv-banner", ".hv-banner-nav" );
 
