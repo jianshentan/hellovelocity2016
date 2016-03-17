@@ -469,6 +469,7 @@ body {
   margin-top: 0px !important;
   font-weight: 700 !important;
 }
+.hv-project-content div ,
 .hv-project-content p {
   margin-bottom: 20px;
 }
@@ -476,9 +477,6 @@ body {
   line-height: 1.6em;
   font-size: 1.2em;
   color: #333;
-}
-.hv-project-content p {
-  margin-bottom: 20px;
 }
 @media all and (max-width: $screen-xs-max) {
   .hv-project-express ,
