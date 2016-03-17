@@ -7088,6 +7088,9 @@ body {
 .hv-post img {
   width: 100%; }
 
+.hv-post div, .hv-post p {
+  margin-bottom: 3vh; }
+
 .hv-project-content h1 {
   font-size: 5.5vw; }
 
@@ -7111,6 +7114,9 @@ body {
 
 .hv-project-content h1 {
   font-size: 5.5vw; }
+
+.hv-project-content div, .hv-project-content p {
+  margin-bottom: 3vh; }
 
 .hv-project-logo-wrapper {
   margin-top: 36px; }
