@@ -6265,6 +6265,9 @@ body {
 .hv-project-content p {
   margin-bottom: 20px; }
 
+.hv-project-content hr {
+  background-color: #888; }
+
 .hv-project-content {
   line-height: 1.6em;
   font-size: 1.2em;
@@ -6687,6 +6690,9 @@ body {
 .hv-post div,
 .hv-post p {
   margin-bottom: 20px; }
+
+.hv-post hr {
+  background-color: #888; }
 
 .hv-post {
   line-height: 1.6em;
