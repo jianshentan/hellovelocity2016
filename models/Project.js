@@ -39,7 +39,7 @@ Project.add(
     pageDescription: { type: String },
     pageGallery: { type: Types.CloudinaryImages },
     pageContentImages: { type: Types.CloudinaryImages, label: "upload images here to use them in the content section" },
-		pageContent: { type: Types.Html, wysiwyg: true, height: 400, label: "Page Content. NOTE: headers must be put into <h1> tags, and regular text must be put within <p> tags" }
+		pageContent: { type: Types.Html, wysiwyg: true, height: 400, label: "Page Content. NOTE: headers must be put into <h1> tags, and regular text must be put within <p> or <div> tags. Bootstrap col-x styling is also enabled." }
   }
 );
 
