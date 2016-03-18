@@ -5993,7 +5993,7 @@ body {
   display: block; }
 
 .hv-banner-nav-container {
-  float: right;
+  text-align: center;
   margin-top: 12px;
   margin-bottom: 10vh; }
 
@@ -6035,7 +6035,6 @@ body {
 
 /* Case Study -------------------------------- */
 .hv-case-study {
-  width: 100vw;
   overflow: hidden;
   position: relative; }
 
@@ -6054,10 +6053,6 @@ body {
   height: 100vh;
   background-color: rgba(0, 0, 255, 0.3);
   position: relative; }
-
-@media all and (min-width: 1200px) {
-  .hv-case-study-img {
-    width: 100%; } }
 
 .hv-case-study-contents {
   top: 40%;

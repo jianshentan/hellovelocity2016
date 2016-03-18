@@ -1,32 +1,29 @@
 {{! default}}
 <!-- Banners -->
-<div class="container">
-  <div class="hv-banners">
+<div class="hv-banners">
 
-    <!-- Banner Content -->
-    <div class="hv-banner-container">
-      {{#each banners}}
-      {{#if display}}
-      <img src="{{ image.url }}" data-id="{{@index}}"
-        {{#if @first}} class="hv-banner active" 
-        {{else}} class="hv-banner" 
-        {{/if}}/>
-      {{/if}}
-      {{/each}}
-    </div>
+  <!-- Banner Content -->
+  <div class="hv-banner-container">
+    {{#each banners}}
+    {{#if display}}
+    <img src="{{ image.url }}" data-id="{{@index}}"
+      {{#if @first}} class="hv-banner active" 
+      {{else}} class="hv-banner" 
+      {{/if}}/>
+    {{/if}}
+    {{/each}}
+  </div>
 
-    <!-- Banner Navigation -->
-    <div class="hv-banner-nav-container">
-      {{#each banners}}
-      {{#if display}}
-      <div data-id="{{@index}}"
-        {{#if @first}}class="hv-banner-nav active"
-        {{else}} class="hv-banner-nav"
-        {{/if}}>{{inc @index}}</div>
-      {{/if}}
-      {{/each}}
-    </div>
-
+  <!-- Banner Navigation -->
+  <div class="hv-banner-nav-container">
+    {{#each banners}}
+    {{#if display}}
+    <div data-id="{{@index}}"
+      {{#if @first}}class="hv-banner-nav active"
+      {{else}} class="hv-banner-nav"
+      {{/if}}>{{inc @index}}</div>
+    {{/if}}
+    {{/each}}
   </div>
 </div>
 
@@ -51,24 +48,26 @@
 </div>
 
 <!-- Main Case Study -->
-<div class="hv-case-study">
-  {{#each case-studies}}
-  {{#if @first}}
-  <img src="{{ backgroundImage.url }}" class="hv-case-study-img"/>
-  <div class="hv-case-study-bg">
-    <div class="container">
-      <div class="hv-case-study-contents">
-        <div class="hv-case-study-title-container">
-          <img src="{{ logo.url }}" class="hv-case-study-logo"/> &nbsp;
-          <span class="hv-case-study-title">{{ title }}</span>
-        </div>  
-        <div class="hv-case-study-catch">{{ catchPhrase }}</div>
-        <a href="{{ actionLink }}"><div class="hv-case-study-link">See how we did it!</div></a>
+<div class="container">
+  <div class="hv-case-study">
+    {{#each case-studies}}
+    {{#if @first}}
+    <img src="{{ backgroundImage.url }}" class="hv-case-study-img"/>
+    <div class="hv-case-study-bg">
+      <div class="container">
+        <div class="hv-case-study-contents">
+          <div class="hv-case-study-title-container">
+            <img src="{{ logo.url }}" class="hv-case-study-logo"/> &nbsp;
+            <span class="hv-case-study-title">{{ title }}</span>
+          </div>  
+          <div class="hv-case-study-catch">{{ catchPhrase }}</div>
+          <a href="{{ actionLink }}"><div class="hv-case-study-link">See how we did it!</div></a>
+        </div>
       </div>
     </div>
+    {{/if}}
+    {{/each}}
   </div>
-  {{/if}}
-  {{/each}}
 </div>
 
 <!-- Project Banner Grid -->
