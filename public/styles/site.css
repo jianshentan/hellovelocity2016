@@ -5901,6 +5901,9 @@ body {
   transform: translateY(-50%) translateX(-50%);
   color: white; }
 
+.hv-nav-links a {
+  color: white; }
+
 .hv-nav-link {
   color: white;
   font-size: 2.4vw;
@@ -6345,7 +6348,7 @@ body {
 .hv-about-banner {
   background-size: cover;
   width: 100%;
-  min-height: 500px;
+  /*min-height: 500px;*/
   max-height: 1000px;
   position: relative;
   overflow: hidden; }
@@ -6370,7 +6373,6 @@ body {
 .hv-services-heading {
   margin-top: 8vh;
   margin-bottom: 4vh;
-  text-align: center;
   color: #0000ff; }
 
 @media screen and (min-width: 1200px) {
@@ -6406,7 +6408,8 @@ body {
     font-size: 36px; } }
 
 .hv-service-text-title {
-  margin-bottom: 12px; }
+  margin-bottom: 12px;
+  font-size: 1.8em; }
 
 .hv-service-text-description {
   font-weight: 400;
