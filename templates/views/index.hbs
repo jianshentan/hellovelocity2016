@@ -16,14 +16,16 @@
 
   <!-- Banner Navigation -->
   <div class="hv-banner-nav-container">
-    {{#each banners}}
-    {{#if display}}
-    <div data-id="{{@index}}"
-      {{#if @first}}class="hv-banner-nav active"
-      {{else}} class="hv-banner-nav"
-      {{/if}}>{{inc @index}}</div>
-    {{/if}}
-    {{/each}}
+    <div class="hv-banner-nav-wrapper">
+      {{#each banners}}
+      {{#if display}}
+      <div data-id="{{@index}}"
+        {{#if @first}}class="hv-banner-nav active"
+        {{else}} class="hv-banner-nav"
+        {{/if}}>{{inc @index}}</div>
+      {{/if}}
+      {{/each}}
+    </div>
   </div>
 </div>
 
@@ -108,7 +110,7 @@
 </div>
 
 <!-- .js link -->
-<script>var isMobile = false</script>
+<script>var isMobile = false;</script>
 <script src="/js/util.js"></script>
 <script src="/js/index.js"></script>
 

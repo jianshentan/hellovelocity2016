@@ -1,6 +1,8 @@
-var globals = [isMobile];
+var globals = [isMobile, globalEventManager];
 
 (function(globals) {
+
+  var globalEventManager = globals[1];
 
   // banner navigation 
   hvUtil.slideshow( ".hv-banner", ".hv-banner-nav" );
@@ -19,8 +21,27 @@ var globals = [isMobile];
 
     });
 
-
   } else { // is not mobile
+
+    // carousel
+    // TODO connect carousel with slideshow util file
+    setInterval( function() {
+
+      var currentBanner = $( ".hv-banner.active" );
+      var nextBanner;
+      if( currentBanner.next().length != 0 ) {
+        nextBanner = currentBanner.next();
+      } else {
+        nextBanner = $( ".hv-banner:first" );
+      }
+      currentBanner.removeClass( "active" ); 
+      nextBanner.addClass( "active" );
+
+      var index = nextBanner.attr( "data-id" );
+      globalEventManager.trigger( "bannerChange", { index: index } );
+
+    }, 6000);
+
     // mission cursor
     var minWidth = 768-48;
     var missionContainer = $( ".hv-mission-container" );
@@ -50,7 +71,6 @@ var globals = [isMobile];
         bannerImage.animate({ bottom: "0" }, 100, function(){});
       });
     });
-
 
   }
 })(globals);

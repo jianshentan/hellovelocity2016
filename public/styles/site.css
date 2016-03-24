@@ -5925,7 +5925,7 @@ body {
 
 @media all and (max-width: 768px) {
   .hv-newsletter {
-    height: 150px; } }
+    height: 180px; } }
 
 .hv-newsletter-form {
   border-bottom: 4px solid white; }
@@ -5985,20 +5985,26 @@ body {
   display: none;
   width: 100%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-  max-height: 60vw;
   min-height: 390px; }
 
 .hv-banner.active {
   display: block; }
 
 .hv-banner-nav-container {
+  position: relative;
+  background-color: #0000ff;
+  height: 10vh; }
+
+.hv-banner-nav-wrapper {
+  position: absolute;
   text-align: center;
-  margin-top: 12px;
-  margin-bottom: 10vh; }
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%); }
 
 .hv-banner-nav {
-  border: 2px solid #0000ff;
-  color: #0000ff;
+  border: 2px solid white;
+  color: white;
   border-radius: 20px;
   width: 30px;
   height: 30px;
@@ -6006,11 +6012,13 @@ body {
   line-height: 25px;
   display: inline-block;
   cursor: pointer;
-  margin-left: 6px; }
+  margin-left: 6px;
+  background-color: #0000ff; }
 
 .hv-banner-nav.active {
-  background-color: #0000ff;
-  color: white; }
+  background-color: white;
+  color: #0000ff;
+  text-decoration: underline; }
 
 /* Mission ---------------------------------- */
 .hv-mission-container {
@@ -6123,7 +6131,7 @@ body {
 .hv-projects-heading {
   margin-top: 10vh;
   position: relative;
-  margin-bottom: 10vh;
+  margin-bottom: 30px;
   min-width: 738px;
   color: #0000ff; }
 
@@ -6199,9 +6207,6 @@ body {
   color: white;
   text-align: center;
   font-size: 1.4em; }
-
-.hv-project-slideshow-wrapper {
-  width: 100vw; }
 
 .hv-project-slideshow {
   margin-top: 8vh;
@@ -6393,8 +6398,7 @@ body {
   font-weight: 700;
   text-align: center;
   width: 100%;
-  transform: translateY(-50%);
-  top: 50%;
+  bottom: 40px;
   padding-right: 15px; }
 
 @media screen and (min-width: 1200px) {
@@ -6557,11 +6561,11 @@ body {
   left: 0px;
   z-index: 3;
   display: none;
-  font-size: 1.5vw; }
+  font-size: 14px; }
 
 @media all and (max-width: 768px) {
   .hv-member-text {
-    font-size: 12px; } }
+    font-size: 10px; } }
 
 @media screen and (min-width: 1200px) {
   .hv-member-text {
@@ -6695,6 +6699,22 @@ body {
   line-height: 1.6em;
   font-size: 1.2em;
   color: #333; }
+
+/* ========================================== 
+   Pagination 
+   ========================================== */
+.pagination {
+  border: 2px solid #0000ff;
+  border-radius: 0; }
+
+.pagination a {
+  border-radius: 0px !important;
+  border: 0px !important;
+  color: #0000ff !important; }
+
+.pagination .active a {
+  background-color: #0000ff !important;
+  color: white !important; }
 
 /* ========================================== 
   Loading  

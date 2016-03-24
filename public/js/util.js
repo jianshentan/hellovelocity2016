@@ -1,4 +1,8 @@
-var hvUtil = (function() {
+var globals = [globalEventManager];
+
+var hvUtil = (function(globals) {
+
+  var eventManager = globals[0];
 
   /* 
    * public function
@@ -15,12 +19,21 @@ var hvUtil = (function() {
       navButton.click( function() {
         deactivateAll( nav );
         deactivateAll( image );
-        console.log( index );
 
         $( this ).addClass( "active" );
         $( image + "[data-id='" + index + "']" ).addClass( "active" );
       });
     });
+
+    eventManager.on( "bannerChange", function( e, data ) {
+      var index = data.index;
+      deactivateAll( nav );
+      deactivateAll( image );
+
+      $( nav + "[data-id='" + index + "']" ).addClass( "active" );
+      $( image + "[data-id='" + index + "']" ).addClass( "active" );
+    });
+
   }
 
   function deactivateAll( selector ) {
@@ -52,4 +65,4 @@ var hvUtil = (function() {
 
   return { slideshow }
 
-})();
+})(globals);
