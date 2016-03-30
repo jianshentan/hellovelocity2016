@@ -30,7 +30,7 @@ Post.add(
     gallery: { type: Types.CloudinaryImages, label: "Images for the content of the post page" },
     content: {
       brief: { type: Types.Html, wysiwyg: true, height: 100, label: "Blog Thumbnail description text" },
-      extended: { type: Types.Html, wysiwyg: true, height: 600, label: "Main blog text. NOTE: headers must be put into <h1> tags, and regular text must be put within <p> or <div> tags. Bootstrap col-x styling is also enabled." }
+      extended: { type: Types.Html, wysiwyg: true, height: 600, label: "Main blog text. NOTE: headers must be put into <h1> tags or <h2> tags, and regular text must be put within <p> or <div> tags. Bootstrap col-x styling is also enabled." }
     },
   },
   "Categories",

@@ -8,6 +8,7 @@
     });
   });
   
+  /*
   $( ".hv-service" ).each( function() {
     $( this ).hover( function() {
       $( this )
@@ -23,6 +24,6 @@
         }, 200, function(){});
     })
   });
-
+  */
 
 })();

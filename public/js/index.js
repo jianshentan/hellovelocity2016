@@ -24,7 +24,6 @@ var globals = [isMobile, globalEventManager];
   } else { // is not mobile
 
     // carousel
-    // TODO connect carousel with slideshow util file
     setInterval( function() {
 
       var currentBanner = $( ".hv-banner.active" );
