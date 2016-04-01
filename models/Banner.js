@@ -18,8 +18,8 @@ Banner.add({
 	title: { type: String, required: true },
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	publishedDate: { type: Types.Date, index: true },
-	image: { type: Types.CloudinaryImage },
-  mobileImage: { type: Types.CloudinaryImage },
+	image: { type: Types.CloudinaryImage, label: "Desktop Image - must be 1600 X 800 px" },
+  mobileImage: { type: Types.CloudinaryImage, label: "Mobile Image - must be H X W px" },
   display: { type: Types.Boolean, default: true }
 });
 

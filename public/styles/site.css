@@ -6029,24 +6029,24 @@ body {
   transform: translateY(-50%) translateX(-50%); }
 
 .hv-banner-nav {
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  color: #0000ff;
+  border: 3px solid white;
+  color: white;
   border-radius: 20px;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   text-align: center;
-  line-height: 25px;
+  line-height: 36px;
+  font-weight: 700;
+  font-size: 20px;
   display: inline-block;
   cursor: pointer;
-  margin-left: 6px;
-  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0px 6px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
 
 .hv-banner-nav.active {
-  border: 2px solid #0000ff;
+  border: 3px solid #0000ff;
   background-color: #0000ff;
-  color: white;
-  text-decoration: underline; }
+  color: white; }
 
 /* Mission ---------------------------------- */
 .hv-mission-container {
@@ -6425,7 +6425,7 @@ body {
   overflow: hidden;
   margin-bottom: 15px;
   position: relative;
-  height: 400px; }
+  height: 300px; }
 
 .hv-service-text {
   position: absolute;
@@ -6461,10 +6461,6 @@ body {
   height: 100%;
   z-index: 2; }
 
-@media only screen and (max-width: 992px) {
-  .hv-service-overlay {
-    opacity: 0.2; } }
-
 .hv-service-image {
   height: 100%;
   z-index: 1; }
@@ -6480,7 +6476,17 @@ body {
 @media all and (max-width: 768px) {
   .hv-about-description,
   .hv-service-text {
-    font-size: 36px; } }
+    font-size: 36px; }
+  .hv-service-image {
+    height: 100%;
+    width: auto; } }
+
+@media only screen and (max-width: 992px) {
+  .hv-service-overlay {
+    opacity: 0.2; }
+  .hv-service-image {
+    height: 100%;
+    width: auto; } }
 
 @media screen and (min-width: 1200px) {
   .hv-about-description,

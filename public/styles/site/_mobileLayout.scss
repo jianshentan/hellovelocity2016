@@ -14,6 +14,10 @@ body {
 .hv-nav-expanded .hv-nav-link {
   font-size: 8vw;
 }
+input, textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
 
 /* ========================================== 
    Banner 
@@ -69,6 +73,9 @@ body {
 .hv-newsletter {
   height: inherit;
   width: 100vw;
+}
+.hv-newsletter {
+  font-size: 8vw;
 }
 .hv-newsletter-wrapper {
   position: inherit;
@@ -195,6 +202,9 @@ body {
   margin-top: 6vh;
   margin-bottom: 6vh;
 }
+.hv-projects-banner {
+  margin-bottom: 0px;
+}
 .hv-project-banner-description {
   top: 45%;
 }
@@ -204,6 +214,9 @@ body {
   width: 68%;
   font-size: 0.7em;
   margin: 0 auto;
+}
+.hv-project-banner-wrapper {
+  margin-bottom: 5vw;
 }
 
 /* ========================================== 

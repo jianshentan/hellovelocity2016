@@ -22,6 +22,7 @@ var hvUtil = (function(globals) {
 
         $( this ).addClass( "active" );
         $( image + "[data-id='" + index + "']" ).addClass( "active" );
+        eventManager.trigger( "bannerNavigate", { index: index } );
       });
     });
 
