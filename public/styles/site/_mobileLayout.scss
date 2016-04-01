@@ -27,7 +27,7 @@ input, textarea {
   margin-top: 0px;
   margin-left: 0px;
   width: 100vw;
-  height: 90vh;
+  height: auto;
   margin-bottom: inherit;
 }
 .hv-banner-container {
@@ -36,8 +36,8 @@ input, textarea {
 }
 .hv-banner {
   max-height: inherit;
-  height: 100%;
-  width: inherit;
+  height: auto;
+  width: 100%;
   transform: translateX(-50%);
   margin-left: 50%;
 }
@@ -55,6 +55,7 @@ input, textarea {
 }
 .hv-banner-nav {
   background-color: white;
+  color: $primary-color;
   border: 2px solid white;
   width: 10vw;
   height: 10vw;
@@ -201,6 +202,9 @@ input, textarea {
   font-size: 8vw;
   margin-top: 6vh;
   margin-bottom: 6vh;
+}
+.hv-projects-banners {
+  margin-bottom: 0px;
 }
 .hv-projects-banner {
   margin-bottom: 0px;

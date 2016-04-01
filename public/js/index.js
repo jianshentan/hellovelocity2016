@@ -4,6 +4,35 @@ var globals = [isMobile, globalEventManager];
 
   var eventManager = globals[1];
 
+  // carousel
+  var timer;
+  resetInterval();
+  function resetInterval() {
+    clearInterval(timer)
+    timer = setInterval( function() {
+
+      var currentBanner = $( ".hv-banner.active" );
+      var nextBanner;
+      if( currentBanner.next().length != 0 ) {
+        nextBanner = currentBanner.next();
+      } else {
+        nextBanner = $( ".hv-banner:first" );
+      }
+      currentBanner.removeClass( "active" ); 
+      nextBanner.addClass( "active" );
+
+      var index = nextBanner.attr( "data-id" );
+      eventManager.trigger( "bannerChange", { index: index } );
+
+    }, 10000);
+  }
+
+  eventManager.on( "bannerNavigate", function( e, data ) {
+    resetInterval();
+  });
+
+
+
   // banner navigation 
   hvUtil.slideshow( ".hv-banner", ".hv-banner-nav" );
 
@@ -22,34 +51,6 @@ var globals = [isMobile, globalEventManager];
     });
 
   } else { // is not mobile
-
-    // carousel
-    var timer;
-    resetInterval();
-    function resetInterval() {
-      clearInterval(timer)
-      timer = setInterval( function() {
-
-        var currentBanner = $( ".hv-banner.active" );
-        var nextBanner;
-        if( currentBanner.next().length != 0 ) {
-          nextBanner = currentBanner.next();
-        } else {
-          nextBanner = $( ".hv-banner:first" );
-        }
-        currentBanner.removeClass( "active" ); 
-        nextBanner.addClass( "active" );
-
-        var index = nextBanner.attr( "data-id" );
-        eventManager.trigger( "bannerChange", { index: index } );
-
-      }, 10000);
-    }
-
-    eventManager.on( "bannerNavigate", function( e, data ) {
-      resetInterval();
-    });
-
     // mission cursor
     var minWidth = 768-48;
     var missionContainer = $( ".hv-mission-container" );

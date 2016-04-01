@@ -14,7 +14,7 @@ var Service = new keystone.List('Service', {
 Service.add({
 	name: { type: String, required: true },
 	description: { type: String },
-	image: { type: Types.CloudinaryImage }
+	image: { type: Types.CloudinaryImage, label: "Serive Image Banner. NOTE: image must be 600 X 320 px" }
 });
 
 Service.relationship({ ref: 'About', path: 'services' });
