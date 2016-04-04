@@ -22,7 +22,8 @@ $screen-lg-min: 1200px;
   }
 }
 @media screen and (min-width: $screen-md-min) {
-  .hv-about-banner-text {
+  .scss-large-content-font {
+  /*.hv-about-banner-text {*/
     font-size: 48px;
   }
 }
@@ -247,6 +248,7 @@ body {
   position: relative;
   margin-bottom: 10vh;
   min-width: $screen-xs-max - 48;
+  font-size: 5vw !important;
 }
 
 .hv-art-mission,
@@ -700,6 +702,9 @@ body {
   font-size: 3vw;
   padding-top: 48px;
   padding-bottom: 48px;
+}
+.hv-about-description-text p {
+  @extend .scss-large-content-font;
 }
 @media all and (max-width: $screen-xs-max) {
   .hv-about-description,

@@ -237,6 +237,12 @@ input, textarea {
   margin-bottom: 36px;
   font-size: 7.5vw;
 }
+.hv-services {
+  margin-bottom: 0px;
+}
+.hv-service {
+  margin-bottom: 5vw;
+}
 .hv-service-wrapper {
   padding-right: inherit;
 }
@@ -251,10 +257,12 @@ input, textarea {
   opacity: 0.6;
 }
 .hv-about-description {
-  font-size: 6vw;
+  font-size: 7vw;
   background-color: white;
   color: $primary-color;
   border-top: 3px solid $primary-color;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 .hvm-contact-wrapper {
   background-color: $primary-color;

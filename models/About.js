@@ -30,8 +30,8 @@ About.add(
   "Contact",
   {
     instagram: { type: Types.CloudinaryImage },
-    instagramHandle: { type: String },
-    contactDetails: { type: Types.Html, wysiwyg: true, height: 300 }
+    instagramHandle: { type: String }
+    //contactDetails: { type: Types.Html, wysiwyg: true, height: 300 }
   },
   "Founders",
   {
