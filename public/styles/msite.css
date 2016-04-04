@@ -5843,25 +5843,29 @@ button.close {
   font-weight: 700; }
 
 /* Sass variables and Classes -------------- */
-.scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text p, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
+.scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
+.hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
 .hv-commercial-mission, .hv-blog-filler {
   font-family: Montserrat;
   font-weight: 700;
   font-size: 5vw; }
 
 @media screen and (min-width: 1200px) {
-  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text p, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
+  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
+  .hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
   .hv-commercial-mission, .hv-blog-filler {
     font-size: 64px; } }
 
 @media screen and (min-width: 992px) {
-  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text p, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
+  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
+  .hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
   .hv-commercial-mission, .hv-blog-filler {
     /*.hv-about-banner-text {*/
     font-size: 48px; } }
 
 @media all and (max-width: 768px) {
-  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text p, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
+  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
+  .hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
   .hv-commercial-mission, .hv-blog-filler {
     font-size: 42px; } }
 
@@ -6821,7 +6825,8 @@ body {
     transform: rotate(360deg); } }
 
 /* Sass variables and Classes -------------- */
-.scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text p, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
+.scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
+.hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
 .hv-commercial-mission, .hv-blog-filler {
   font-size: 8vw; }
 
@@ -7068,9 +7073,7 @@ input, textarea {
   font-size: 7vw;
   background-color: white;
   color: #0000ff;
-  border-top: 3px solid #0000ff;
-  margin-top: 5vh;
-  margin-bottom: 5vh; }
+  border-top: 3px solid #0000ff; }
 
 .hvm-contact-wrapper {
   background-color: #0000ff;

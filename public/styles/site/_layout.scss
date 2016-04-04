@@ -705,7 +705,8 @@ body {
   padding-top: 48px;
   padding-bottom: 48px;
 }
-.hv-about-description-text p {
+.hv-about-description-text > p ,
+.hv-about-description-text > div {
   @extend .scss-large-content-font;
 }
 @media all and (max-width: $screen-xs-max) {

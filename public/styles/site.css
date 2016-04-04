@@ -5843,22 +5843,26 @@ button.close {
   font-weight: 700; }
 
 /* Sass variables and Classes -------------- */
-.scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text p, .hv-team-heading, .hv-blog-header, .hv-post-banner-text {
+.scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
+.hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text {
   font-family: Montserrat;
   font-weight: 700;
   font-size: 5vw; }
 
 @media screen and (min-width: 1200px) {
-  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text p, .hv-team-heading, .hv-blog-header, .hv-post-banner-text {
+  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
+  .hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text {
     font-size: 64px; } }
 
 @media screen and (min-width: 992px) {
-  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text p, .hv-team-heading, .hv-blog-header, .hv-post-banner-text {
+  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
+  .hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text {
     /*.hv-about-banner-text {*/
     font-size: 48px; } }
 
 @media all and (max-width: 768px) {
-  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text p, .hv-team-heading, .hv-blog-header, .hv-post-banner-text {
+  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
+  .hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text {
     font-size: 42px; } }
 
 /* ========================================== 
