@@ -5843,30 +5843,45 @@ button.close {
   font-weight: 700; }
 
 /* Sass variables and Classes -------------- */
-.scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
-.hv-about-description-text > div, .hv-contact-text-wrapper .c, .hv-team-heading, .hv-blog-header, .hv-post-banner-text {
+.scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-about-description-text > p,
+.hv-about-description-text > div, .hv-contact-text-wrapper .c, .hv-blog-header, .hv-post-banner-text {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 5vw; }
+
+.scss-medium-content-font, .hv-services-heading, .hv-team-heading {
   font-family: Montserrat;
   font-weight: 700;
   font-size: 5vw; }
 
 @media all and (max-width: 768px) {
-  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
-  .hv-about-description-text > div, .hv-contact-text-wrapper .c, .hv-team-heading, .hv-blog-header, .hv-post-banner-text {
+  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-about-description-text > p,
+  .hv-about-description-text > div, .hv-contact-text-wrapper .c, .hv-blog-header, .hv-post-banner-text {
     font-size: 42px;
-    line-height: 48px; } }
+    line-height: 48px; }
+  .scss-medium-content-font, .hv-services-heading, .hv-team-heading {
+    font-size: 36px;
+    line-height: 40px; } }
 
 @media screen and (min-width: 992px) {
-  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
-  .hv-about-description-text > div, .hv-contact-text-wrapper .c, .hv-team-heading, .hv-blog-header, .hv-post-banner-text {
+  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-about-description-text > p,
+  .hv-about-description-text > div, .hv-contact-text-wrapper .c, .hv-blog-header, .hv-post-banner-text {
     /*.hv-about-banner-text {*/
     font-size: 48px;
-    line-height: 56px; } }
+    line-height: 56px; }
+  .scss-medium-content-font, .hv-services-heading, .hv-team-heading {
+    /*.hv-about-banner-text {*/
+    font-size: 40px;
+    line-height: 45px; } }
 
 @media screen and (min-width: 1200px) {
-  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
-  .hv-about-description-text > div, .hv-contact-text-wrapper .c, .hv-team-heading, .hv-blog-header, .hv-post-banner-text {
+  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-about-description-text > p,
+  .hv-about-description-text > div, .hv-contact-text-wrapper .c, .hv-blog-header, .hv-post-banner-text {
     font-size: 64px;
-    line-height: 72px; } }
+    line-height: 72px; }
+  .scss-medium-content-font, .hv-services-heading, .hv-team-heading {
+    font-size: 56px;
+    line-height: 64px; } }
 
 /* ========================================== 
    Default
@@ -6029,7 +6044,6 @@ body {
 .hv-banner {
   display: none;
   width: 100%;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   min-height: 390px; }
 
 .hv-banner.active {
@@ -6059,8 +6073,7 @@ body {
   font-size: 20px;
   display: inline-block;
   cursor: pointer;
-  margin: 0px 6px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
+  margin: 0px 6px; }
 
 .hv-banner-nav.active {
   border: 3px solid #0000ff;
@@ -6430,21 +6443,18 @@ body {
   color: white;
   width: 100%;
   max-width: 1200px;
-  margin-top: 10vh;
-  margin-bottom: 10vh; }
+  margin-top: 20vh;
+  margin-bottom: 20vh; }
 
 @media screen and (min-width: 1200px) {
   .hv-about-banner-image {
     width: 100%; } }
 
 .hv-services-heading {
-  margin-top: 8vh;
-  margin-bottom: 4vh;
-  color: #0000ff; }
-
-@media screen and (min-width: 1200px) {
-  .hv-services-heading {
-    font-size: 48px; } }
+  margin-top: 48px;
+  margin-bottom: 48px;
+  color: #0000ff;
+  text-align: center; }
 
 .hv-service-wrapper {
   padding-right: 15px; }
@@ -6501,8 +6511,8 @@ body {
   background-color: #0000ff;
   color: white;
   font-size: 3vw;
-  padding-top: 48px;
-  padding-bottom: 48px; }
+  padding-top: 12vh;
+  padding-bottom: 12vh; }
 
 @media all and (max-width: 768px) {
   .hv-about-description,
@@ -6607,7 +6617,8 @@ body {
 
 .hv-team-heading {
   color: white;
-  margin-top: 48px; }
+  margin-top: 48px;
+  text-align: center; }
 
 .hv-members {
   margin-top: 48px;
