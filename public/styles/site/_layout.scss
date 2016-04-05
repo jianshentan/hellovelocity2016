@@ -100,9 +100,10 @@ body {
   font-size: 40px;
   font-family: Montserrat;
 }
-@media only screen and (min-width : $screen-md-max) {
+@media only screen and (min-width : $screen-lg-min) {
   .hv-newsletter {
     font-size: 64px;
+    height: 320px;
   }
   .hv-newsletter-input {
     width: 700px;
@@ -186,6 +187,17 @@ body {
 .hv-footer-link a {
   color: $dark-grey;
   text-decoration: none;
+}
+@media only screen and (min-width: $screen-lg-min) {
+  .hv-footer-information {
+    height: 80px;
+  }
+  .hv-footer-copyright {
+    line-height: 80px;
+  }
+  .hv-footer-link {
+    line-height: 80px;
+  }
 }
 @media all and (max-width: $screen-xs-max) {
   .hv-footer-information {
@@ -302,6 +314,7 @@ body {
 .hv-case-study-contents {
   top: 40%;
   position: absolute;
+  left: 60px;
 }
 .hv-case-study-title-container {
   background-color: $primary-color;
@@ -395,7 +408,7 @@ body {
   color: $primary-color;
 }
 .hv-projects-banners {
-  margin-bottom: 10vh;
+  margin-bottom: 48px;
 }
 .hv-project-banner-wrapper {
   margin-bottom: 30px;
@@ -811,7 +824,7 @@ body {
   color: $primary-color; 
   font-weight: bold;
 }
-.hv-contact-text-wrapper .a {
+hv-contact-text-wrapper .a {
 }
 .hv-contact-text-wrapper .b ,
 .hv-contact-text-wrapper .d {
@@ -819,7 +832,7 @@ body {
   color: #555;
 }
 .hv-contact-text-wrapper .c {
-  font-size: 4vw;
+  @extend .scss-large-content-font;
   color: #555;
 }
 @media all and (max-width: $screen-xs-max) {
@@ -848,6 +861,9 @@ body {
   margin-top: 48px;
   margin-bottom: 48px;
   position: relative;
+}
+.hv-member {
+  margin-bottom: 30px;
 }
 .hv-member-image {
   width: 100%;

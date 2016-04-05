@@ -55,18 +55,17 @@
     {{#each case-studies}}
     {{#if @first}}
     <img src="{{ backgroundImage.url }}" class="hv-case-study-img"/>
-    <div class="hv-case-study-bg">
-      <div class="container">
-        <div class="hv-case-study-contents">
-          <div class="hv-case-study-title-container">
-            <img src="{{ logo.url }}" class="hv-case-study-logo"/> &nbsp;
-            <span class="hv-case-study-title">{{ title }}</span>
-          </div>  
-          <div class="hv-case-study-catch">{{ catchPhrase }}</div>
-          <a href="{{ actionLink }}"><div class="hv-case-study-link">See how we did it!</div></a>
-        </div>
+    <div class="container">
+      <div class="hv-case-study-contents">
+        <div class="hv-case-study-title-container">
+          <img src="{{ logo.url }}" class="hv-case-study-logo"/> &nbsp;
+          <span class="hv-case-study-title">{{ title }}</span>
+        </div>  
+        <div class="hv-case-study-catch">{{ catchPhrase }}</div>
+        <a href="{{ actionLink }}"><div class="hv-case-study-link">See how we did it!</div></a>
       </div>
     </div>
+    <div class="hv-case-study-bg"></div>
     {{/if}}
     {{/each}}
   </div>

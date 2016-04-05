@@ -5844,7 +5844,7 @@ button.close {
 
 /* Sass variables and Classes -------------- */
 .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
-.hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
+.hv-about-description-text > div, .hv-contact-text-wrapper .c, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
 .hv-commercial-mission, .hv-blog-filler {
   font-family: Montserrat;
   font-weight: 700;
@@ -5852,14 +5852,14 @@ button.close {
 
 @media all and (max-width: 768px) {
   .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
-  .hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
+  .hv-about-description-text > div, .hv-contact-text-wrapper .c, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
   .hv-commercial-mission, .hv-blog-filler {
     font-size: 42px;
     line-height: 48px; } }
 
 @media screen and (min-width: 992px) {
   .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
-  .hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
+  .hv-about-description-text > div, .hv-contact-text-wrapper .c, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
   .hv-commercial-mission, .hv-blog-filler {
     /*.hv-about-banner-text {*/
     font-size: 48px;
@@ -5867,7 +5867,7 @@ button.close {
 
 @media screen and (min-width: 1200px) {
   .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
-  .hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
+  .hv-about-description-text > div, .hv-contact-text-wrapper .c, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
   .hv-commercial-mission, .hv-blog-filler {
     font-size: 64px;
     line-height: 72px; } }
@@ -5933,7 +5933,8 @@ body {
 
 @media only screen and (min-width: 1200px) {
   .hv-newsletter {
-    font-size: 64px; }
+    font-size: 64px;
+    height: 320px; }
   .hv-newsletter-input {
     width: 700px; } }
 
@@ -6005,6 +6006,14 @@ body {
 .hv-footer-link a {
   color: #555;
   text-decoration: none; }
+
+@media only screen and (min-width: 1200px) {
+  .hv-footer-information {
+    height: 80px; }
+  .hv-footer-copyright {
+    line-height: 80px; }
+  .hv-footer-link {
+    line-height: 80px; } }
 
 @media all and (max-width: 768px) {
   .hv-footer-information {
@@ -6112,7 +6121,8 @@ body {
 
 .hv-case-study-contents {
   top: 40%;
-  position: absolute; }
+  position: absolute;
+  left: 60px; }
 
 .hv-case-study-title-container {
   background-color: #0000ff;
@@ -6192,7 +6202,7 @@ body {
   color: #0000ff; }
 
 .hv-projects-banners {
-  margin-bottom: 10vh; }
+  margin-bottom: 48px; }
 
 .hv-project-banner-wrapper {
   margin-bottom: 30px; }
@@ -6583,7 +6593,6 @@ body {
   color: #555; }
 
 .hv-contact-text-wrapper .c {
-  font-size: 4vw;
   color: #555; }
 
 @media all and (max-width: 768px) {
@@ -6608,6 +6617,9 @@ body {
   margin-top: 48px;
   margin-bottom: 48px;
   position: relative; }
+
+.hv-member {
+  margin-bottom: 30px; }
 
 .hv-member-image {
   width: 100%;
@@ -6839,7 +6851,7 @@ body {
 
 /* Sass variables and Classes -------------- */
 .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
-.hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
+.hv-about-description-text > div, .hv-contact-text-wrapper .c, .hv-team-heading, .hv-blog-header, .hv-post-banner-text, .hv-mission-and, .hv-art-mission,
 .hv-commercial-mission, .hv-blog-filler {
   font-size: 8vw; }
 
