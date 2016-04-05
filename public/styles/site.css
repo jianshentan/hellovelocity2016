@@ -5849,21 +5849,24 @@ button.close {
   font-weight: 700;
   font-size: 5vw; }
 
-@media screen and (min-width: 1200px) {
+@media all and (max-width: 768px) {
   .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
   .hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text {
-    font-size: 64px; } }
+    font-size: 42px;
+    line-height: 48px; } }
 
 @media screen and (min-width: 992px) {
   .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
   .hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text {
     /*.hv-about-banner-text {*/
-    font-size: 48px; } }
+    font-size: 48px;
+    line-height: 56px; } }
 
-@media all and (max-width: 768px) {
+@media screen and (min-width: 1200px) {
   .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-services-heading, .hv-about-description-text > p,
   .hv-about-description-text > div, .hv-team-heading, .hv-blog-header, .hv-post-banner-text {
-    font-size: 42px; } }
+    font-size: 64px;
+    line-height: 72px; } }
 
 /* ========================================== 
    Default
@@ -6059,8 +6062,11 @@ body {
 .hv-mission-container {
   position: relative;
   margin-bottom: 10vh;
-  min-width: 720px;
-  font-size: 5vw !important; }
+  min-width: 720px; }
+
+@media screen and (max-width: 1200px) {
+  .hv-mission-container {
+    font-size: 5vw !important; } }
 
 .hv-art-mission,
 .hv-commercial-mission {
@@ -6115,12 +6121,13 @@ body {
 .hv-case-study-logo {
   height: 7vw;
   width: auto;
-  vertical-align: top; }
+  vertical-align: top;
+  max-height: 72px;
+  max-width: 72px; }
 
 .hv-case-study-title {
   font-weight: 400 !important;
-  color: white;
-  line-height: 7vw; }
+  color: white; }
 
 .hv-case-study-catch {
   font-family: Montserrat;
@@ -6138,6 +6145,12 @@ body {
   margin-top: 3vh;
   display: inline-block;
   font-weight: 700; }
+
+@media screen and (min-width: 1200px) {
+  .hv-case-study-catch {
+    font-size: 36px; }
+  .hv-case-study-link {
+    font-size: 20px; } }
 
 @media all and (max-width: 768px) {
   .hv-case-study {
@@ -6168,9 +6181,9 @@ body {
 
 /* Project Grid -------------------------------- */
 .hv-projects-heading {
-  margin-top: 10vh;
+  margin-top: 48px;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 48px;
   min-width: 738px;
   color: #0000ff; }
 

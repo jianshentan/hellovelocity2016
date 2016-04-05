@@ -16,22 +16,26 @@ $screen-lg-min: 1200px;
   font-weight: 700;
   font-size: 5vw;
 }
-@media screen and (min-width: $screen-lg-min) {
+@media all and (max-width: $screen-xs-max) {
   .scss-large-content-font {
-    font-size: 64px;
+    font-size: 42px;
+    line-height: 48px;
   }
 }
 @media screen and (min-width: $screen-md-min) {
   .scss-large-content-font {
   /*.hv-about-banner-text {*/
     font-size: 48px;
+    line-height: 56px;
   }
 }
-@media all and (max-width: $screen-xs-max) {
+@media screen and (min-width: $screen-lg-min) {
   .scss-large-content-font {
-    font-size: 42px;
+    font-size: 64px;
+    line-height: 72px;
   }
 }
+
 
 /* ========================================== 
    Default
@@ -250,9 +254,12 @@ body {
   position: relative;
   margin-bottom: 10vh;
   min-width: $screen-xs-max - 48;
-  font-size: 5vw !important;
 }
-
+@media screen and (max-width: $screen-lg-min) {
+  .hv-mission-container {
+    font-size: 5vw !important;
+  }
+}
 .hv-art-mission,
 .hv-commercial-mission {
   position: absolute;
@@ -308,12 +315,13 @@ body {
   height: 7vw;
   width: auto;
   vertical-align: top;
+  max-height: 72px;
+  max-width: 72px;
 }
 .hv-case-study-title {
   @extend .scss-large-content-font;
   font-weight: 400 !important;
   color: white;
-  line-height: 7vw;
 }
 .hv-case-study-catch {
   font-family: Montserrat;
@@ -331,6 +339,14 @@ body {
   margin-top: 3vh;
   display: inline-block;
   font-weight: 700;
+}
+@media screen and (min-width: $screen-lg-min) {
+  .hv-case-study-catch {
+    font-size: 36px;
+  }
+  .hv-case-study-link {
+    font-size: 20px;
+  }
 }
 @media all and (max-width: $screen-xs-max) {
   .hv-case-study {
@@ -372,9 +388,9 @@ body {
 /* Project Grid -------------------------------- */
 .hv-projects-heading {
   @extend .scss-large-content-font;
-  margin-top: 10vh;
+  margin-top: 48px;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 48px;
   min-width: $screen-xs-max - 30;
   color: $primary-color;
 }
