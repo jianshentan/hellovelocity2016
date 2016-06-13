@@ -1,9 +1,24 @@
 {{! default}}
+
+<!-- .js link -->
+<script>var isMobile = false;</script>
+<script src="/js/util.js"></script>
+<script src="/js/index.js"></script>
+
+{{#ifeq section "projects" }}
+<script>
+  $( document ).ready( function() {
+    $( window ).scrollTop( $( "#hv-projects" ).offset().top + 24);
+  });
+</script>
+{{/ifeq}}
+
 <!-- Banners -->
-<div class="hv-banners">
+<div class="hv-banners section">
 
   <!-- Banner Content -->
   <div class="hv-banner-container">
+    
     {{#each banners}}
     {{#if display}}
     <img src="{{ image.url }}" data-id="{{@index}}"
@@ -30,93 +45,92 @@
 </div>
 
 <!-- Mission -->
-<div class="container">
-  <div class="hv-mission-container">
-    <div class="hv-commercial-mission">
-      We build brands for creative,<br> 
-      cutting edge companies and<br>
-      help share their message<br>
-      throughout the web
+<div class="section">
+  <div class="container">
+    <div class="hv-mission-container">
+      <div class="hv-commercial-mission">
+        <!--
+        <a href="/about">Hello Velocity</a> design brands<br> 
+        for disruptive startups<br>
+        and creates viral campaigns to<br>
+        share their ideas with the world.
+        -->
+        Hello Velocity creates brands and
+        viral campaigns to provoke conversation.
+      </div>
+      <!--
+      <div class="hv-art-mission">
+        We create experimental brands<br>
+        that explore new ways for<br> 
+        companies and individuals to<br>
+        express themselves on the web
+      </div>
+      -->
+      <!-- offset height since contents are absolute positioned 
+      <br><br><br><br>-->
     </div>
-    <div class="hv-art-mission">
-      We create experimental brands<br>
-      that explore new ways for<br> 
-      companies and individuals to<br>
-      express themselves on the web
-    </div>
-    <!-- offset height since contents are absolute positioned -->
-    <br><br><br><br>
   </div>
 </div>
 
 <!-- Main Case Study -->
-<div class="container">
-  <div class="hv-case-study">
-    {{#each case-studies}}
-    {{#if @first}}
-    <img src="{{ backgroundImage.url }}" class="hv-case-study-img"/>
-    <div class="container">
-      <div class="hv-case-study-contents">
-        <div class="hv-case-study-title-container">
-          <img src="{{ logo.url }}" class="hv-case-study-logo"/> &nbsp;
-          <span class="hv-case-study-title">{{ title }}</span>
-        </div>  
-        <div class="hv-case-study-catch">{{ catchPhrase }}</div>
-        <a href="{{ actionLink }}"><div class="hv-case-study-link">See how we did it!</div></a>
+<div class="section">
+  <div class="container">
+    <div class="hv-case-study">
+      {{#each case-studies}}
+      {{#if @first}}
+      <img src="{{ backgroundImage.url }}" class="hv-case-study-img"/>
+      <div class="container">
+        <div class="hv-case-study-contents">
+          <div class="hv-case-study-title-container">
+            <img src="{{ logo.url }}" class="hv-case-study-logo"/> &nbsp;
+            <span class="hv-case-study-title">{{ title }}</span>
+          </div>  
+          <div class="hv-case-study-catch">{{ catchPhrase }}</div>
+          <a href="{{ actionLink }}"><div class="hv-case-study-link">See how we did it!</div></a>
+        </div>
       </div>
+      <div class="hv-case-study-bg"></div>
+      {{/if}}
+      {{/each}}
     </div>
-    <div class="hv-case-study-bg"></div>
-    {{/if}}
-    {{/each}}
   </div>
 </div>
 
 <!-- Project Banner Grid -->
-<div class="container" id="hv-projects">
-  <div class="hv-projects-heading">Explore our projects and see how we bring ideas to life!</div>
-  <div class="hv-projects-banners row row-eq-height">
-    {{#each projects}}
-    {{#ifeq state "published"}}
-
-    <div class="hv-project-banner-wrapper col-md-4 col-xs-6" >
-      <div class="hv-project-banner-bg"
-        data-bg-color="{{ bannerBackgroundColor }}">
-
-        <div class="hv-project-banner-header"
-          data-color="{{ bannerTextColor }}">
-          <img src="{{ bannerLogo.url }}" class="hv-project-banner-header-logo">
-          <a href="{{ link }}"><div class="hv-project-banner-header-link">
-            <i class="fa fa-link"></i>
+<div class="section">
+  <div class="container" id="hv-projects">
+    <div class="hv-projects-heading">Explore our projects and see how we bring ideas to life!</div>
+    <div class="hv-projects-banners row row-eq-height">
+      {{#each projects}}
+      {{#ifeq state "published"}}
+  
+      <div class="hv-project-banner-wrapper col-md-4 col-xs-6" >
+        <div class="hv-project-banner-bg"
+          data-bg-color="{{ bannerBackgroundColor }}">
+  
+          <div class="hv-project-banner-header"
+            data-color="{{ bannerTextColor }}">
+            <img src="{{ bannerLogo.url }}" class="hv-project-banner-header-logo">
+            <a href="{{ link }}"><div class="hv-project-banner-header-link">
+              <i class="fa fa-link"></i>
+            </div></a>
+          </div>
+  
+          <a href="{{ projectLink }}"><div class="hv-project-banner-content"
+            data-color="{{ bannerTextColor }}">
+            <div class="hv-project-banner-description">
+              {{ bannerDescription }}
+            </div>
+            <div class="hv-project-banner-image-wrapper">
+              <img class="hv-project-banner-image" src="{{ bannerImage.url }}"/>
+            </div>
           </div></a>
+  
         </div>
-
-        <a href="{{ projectLink }}"><div class="hv-project-banner-content"
-          data-color="{{ bannerTextColor }}">
-          <div class="hv-project-banner-description">
-            {{ bannerDescription }}
-          </div>
-          <div class="hv-project-banner-image-wrapper">
-            <img class="hv-project-banner-image" src="{{ bannerImage.url }}"/>
-          </div>
-        </div></a>
-
-      </div>
-    </div>   
-
-    {{/ifeq}}
-    {{/each}}
+      </div>   
+  
+      {{/ifeq}}
+      {{/each}}
+    </div>
   </div>
 </div>
-
-<!-- .js link -->
-<script>var isMobile = false;</script>
-<script src="/js/util.js"></script>
-<script src="/js/index.js"></script>
-
-{{#ifeq section "projects" }}
-<script>
-  $( document ).ready( function() {
-    $( window ).scrollTop( $( "#hv-projects" ).offset().top + 24);
-  });
-</script>
-{{/ifeq}}

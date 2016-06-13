@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link href="/styles/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="styles/fullpage/jquery.fullPage.css" />
     <!-- link custom stylesheets -->
 		<link href="/styles/site.css" rel="stylesheet">
     {{#ifeq mobile true}}
@@ -81,6 +81,8 @@
     <!-- Load Jquery + Bootstrap first -->
 		<script src="/js/jquery/jquery-1.11.3.min.js"></script>
 		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+    <script src="/js/fullpage/scrolloverflow.min.js"></script>
+		<script src="/js/fullpage/jquery.fullPage.min.js"></script>
 
     <!-- Navigation -->
     <div
@@ -103,7 +105,7 @@
       </div>
     </div>
 
-    <div id="body">
+    <div id="fullpage"> <!-- enable full page library -->
 			<!--
 				Flash messages allow you to display once-off status messages to users, e.g. form
 				validation errors, success messages, etc
@@ -136,16 +138,17 @@
 
 			<!-- The content block should contain the body of your template's content-->
       <script>var globalEventManager = $({});</script>
+      
 			{{{body}}}
-
-		</div>
-
-    {{#ifeq mobile true}}
-      {{>mfooter}}
-    {{else}}
-      {{>footer}}
-    {{/ifeq}}
-
+  
+  
+      {{#ifeq mobile true}}
+        {{>mfooter}}
+      {{else}}
+        {{>footer}}
+      {{/ifeq}}
+  
+    </div>
 
     <!-- .js link -->
     <script>
@@ -154,6 +157,19 @@
         $( ".hv-loading-overlay" ).fadeOut();
       });
     </script>
+    
+    {{#ifeq section 'home'}}
+    <script>
+      // full page scroller
+      $(document).ready(function() {
+        $('#fullpage').fullpage({
+          scrollOverflow: true,
+          scrollOverflowOptions: { click: false }
+          //normalScrollElements: '.hv-projects' // TODO this is not working
+        });
+      });
+    </script>
+    {{/ifeq}}
 
     <script src="/js/default.js"></script>
 

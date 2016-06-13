@@ -43,25 +43,27 @@ var hvUtil = (function(globals) {
     });
   }
 
-  // project color replace
-  $( "*[data-color]" ).each( function() {
-    var primaryColor = $( this ).data( "color" );
-    $( this ).css( "color", primaryColor );
-  });
-
-  $( "*[data-bg-color]" ).each( function() {
-    var backgroundColor = $( this ).data( "bg-color" );
-    $( this ).css( "background-color", backgroundColor);
-  });
-
-  $( "*[data-border-color]" ).each( function() {
-    var borderColor = $( this ).data( "border-color" );
-    $( this ).css( "border", "2px solid " + borderColor );
-  });
-
-  $( "*[data-border-bottom-color]" ).each( function() {
-    var borderColor = $( this ).data( "border-bottom-color" );
-    $( this ).css( "border-bottom", "3px solid " + borderColor );
+  $(document).ready(function() {
+    // project color replace
+    $( "*[data-color]" ).each( function() {
+      var primaryColor = $( this ).data( "color" );
+      $( this ).css( "color", primaryColor );
+    });
+  
+    $( "*[data-bg-color]" ).each( function() {
+      var backgroundColor = $( this ).data( "bg-color" );
+      $( this ).css( "background-color", backgroundColor);
+    });
+  
+    $( "*[data-border-color]" ).each( function() {
+      var borderColor = $( this ).data( "border-color" );
+      $( this ).css( "border", "2px solid " + borderColor );
+    });
+  
+    $( "*[data-border-bottom-color]" ).each( function() {
+      var borderColor = $( this ).data( "border-bottom-color" );
+      $( this ).css( "border-bottom", "3px solid " + borderColor );
+    });
   });
 
   return { slideshow }

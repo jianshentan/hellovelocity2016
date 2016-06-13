@@ -120,16 +120,6 @@ input, textarea {
   margin-bottom: 5vh;
   position: relative;
 }
-.hv-mission-and {
-  @extend .scss-large-content-font;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 1;
-  background-color: white;
-  color: $primary-color;
-}
 .hv-mission hr {
   border: 0px;
   height: 3px;
@@ -137,6 +127,10 @@ input, textarea {
   margin-top: 5vh;
   margin-bottom: 5vh;
 }
+.hv-commercial-mission {
+  @extend .scss-large-content-font;
+}
+/*
 .hv-art-mission {
   text-align: left;
 }
@@ -158,6 +152,7 @@ input, textarea {
   margin-top: 3vw;
   font-size: 5vw;
 }
+*/
 
 /* ========================================== 
    Main page - Casestudy 
