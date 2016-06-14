@@ -1,7 +1,20 @@
 {{! default}}
-<!-- Mobile Banners -->
-<div class="hv-banners" id="hvm-banner">
 
+<!-- .js link -->
+<script>var isMobile = true;</script>
+<script src="/js/util.js"></script>
+<script src="/js/index.js"></script>
+
+{{#ifeq section "projects" }}
+<script>
+  $( document ).ready( function() {
+    $( window ).scrollTop( $( "#hv-projects" ).offset().top-113);
+  });
+</script>
+{{/ifeq}}
+
+<!-- Mobile Banners -->
+<div class="hv-banners section" id="hvm-banner">
   <!-- Banner Content -->
   <div class="hv-banner-container">
     {{#each banners}}
@@ -29,99 +42,78 @@
 </div>
 
 <!-- Mission -->
-<div class="hv-mission ">
-  <!--<div class="hv-mission-and">&nbsp; - and - &nbsp;</div>-->
-  <div class="hv-commercial-mission-wrapper hvm-container">
-    <span class=" hv-commercial-mission">Hello Velocity creates brands for companies that do things differently and builds viral campaigns to share their ideas with the world.</span>
+<div class="section">
+  <div class="hv-mission">
+    <div class="hv-commercial-mission-wrapper hvm-container">
+      <span class=" hv-commercial-mission">Hello Velocity creates brands and viral campaigns to provoke conversation.</span>
+    </div>
   </div>
-  <!--
-  <hr>
-  <div class="hv-art-mission hvm-container">
-    <span class=" hv-art-mission">We create experimental brands that explore new ways for companies and individuals to express themselves on the web</span>  
-  </div>
-  -->
 </div>
 
 <!-- Main Case Study -->
-<div class="hv-case-study ">
-  {{#each case-studies}}
-  {{#if @first}}
-  <img src="{{ backgroundImage.url }}" class="hv-case-study-img "/>
-  <div class="hv-case-study-bg ">
-    <div class="hvm-container">
-      <div class="hv-case-study-contents ">
-        <div class="hv-case-study-title-container">
-          <img src="{{ logo.url }}" class="hv-case-study-logo "/> &nbsp;
-          <span class="hv-case-study-title ">{{ title }}</span>
-        </div>  
-        <div class="hv-case-study-catch ">{{ catchPhrase }}</div>
-        <a href="{{ actionLink }}"><div class="hv-case-study-link">See how we did it!</div></a>
+<div class="section">
+  <div class="hv-case-study ">
+    {{#each case-studies}}
+    {{#if @first}}
+    <img src="{{ backgroundImage.url }}" class="hv-case-study-img "/>
+    <div class="hv-case-study-bg ">
+      <div class="hvm-container">
+        <div class="hv-case-study-contents ">
+          <div class="hv-case-study-title-container">
+            <img src="{{ logo.url }}" class="hv-case-study-logo "/> &nbsp;
+            <span class="hv-case-study-title ">{{ title }}</span>
+          </div>  
+          <div class="hv-case-study-catch ">{{ catchPhrase }}</div>
+          <a href="{{ actionLink }}"><div class="hv-case-study-link">See how we did it!</div></a>
+        </div>
       </div>
     </div>
-  </div>
-  {{/if}}
-  {{/each}}
-</div>
-<div class="hvm-projects-filler">
-  <div class="hvm-container">
-    <a href="#hvm-banner">back to top</a>
-  </div>
-</div>
-
-<!-- Project Banner Grid -->
-<div class="hvm-container" id="hv-projects">
-  <div class="hv-projects-heading">Explore our projects and see how we bring ideas to life!</div>
-  <div class="hv-projects-banners">
-    {{#each projects}}
-    {{#ifeq state "published"}}
-
-    <div class="hv-project-banner-wrapper" >
-      <div class="hv-project-banner-bg"
-        data-bg-color="{{ bannerBackgroundColor }}">
-
-        <div class="hv-project-banner-header"
-          data-color="{{ bannerTextColor }}">
-          <img src="{{ bannerLogo.url }}" class="hv-project-banner-header-logo">
-          <a href="{{ link }}"><div class="hv-project-banner-header-link">
-            <i class="fa fa-link"></i>
-          </div></a>
-        </div>
-
-        <div class="hv-project-banner-content">
-          <div class="hv-project-banner-description" data-color="{{ bannerTextColor }}">
-            {{ bannerDescription }}
-            <br><br>
-            <a href="{{ projectLink }}">
-              <div class="hvm-project-banner-learn-more"
-                data-color="{{ secondaryColor}}" >
-                Learn more
-              </div>
-            </a>
-          </div>
-          <div class="hv-project-banner-image-wrapper">
-            <img class="hv-project-banner-image" src="{{ bannerImage.url }}"/>
-          </div>
-        </div>
-
-      </div>
-    </div>   
-
-    {{/ifeq}}
+    {{/if}}
     {{/each}}
   </div>
 </div>
-
-
-
-<!-- .js link -->
-<script>var isMobile = true;</script>
-<script src="/js/util.js"></script>
-<script src="/js/index.js"></script>
-
-{{#ifeq section "projects" }}
-<script>
-  $( document ).ready( function() {
-    $( window ).scrollTop( $( "#hv-projects" ).offset().top-113);
-  });
-</script>
-{{/ifeq}}
+  
+<!-- Project Banner Grid -->
+<div class="section">
+  <div class="hvm-container" id="hv-projects">
+    <div class="hv-projects-heading">Explore our projects and see how we bring ideas to life!</div>
+    <div class="hv-projects-banners">
+      {{#each projects}}
+      {{#ifeq state "published"}}
+  
+      <div class="hv-project-banner-wrapper" >
+        <div class="hv-project-banner-bg"
+          data-bg-color="{{ bannerBackgroundColor }}">
+  
+          <div class="hv-project-banner-header"
+            data-color="{{ bannerTextColor }}">
+            <img src="{{ bannerLogo.url }}" class="hv-project-banner-header-logo">
+            <a href="{{ link }}"><div class="hv-project-banner-header-link">
+              <i class="fa fa-link"></i>
+            </div></a>
+          </div>
+  
+          <div class="hv-project-banner-content">
+            <div class="hv-project-banner-description" data-color="{{ bannerTextColor }}">
+              {{ bannerDescription }}
+              <br><br>
+              <a href="{{ projectLink }}">
+                <div class="hvm-project-banner-learn-more"
+                  data-color="{{ secondaryColor}}" >
+                  Learn more
+                </div>
+              </a>
+            </div>
+            <div class="hv-project-banner-image-wrapper">
+              <img class="hv-project-banner-image" src="{{ bannerImage.url }}"/>
+            </div>
+          </div>
+  
+        </div>
+      </div>   
+  
+      {{/ifeq}}
+      {{/each}}
+    </div>
+  </div>
+</div>

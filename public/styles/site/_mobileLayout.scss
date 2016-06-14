@@ -36,10 +36,8 @@ input, textarea {
 }
 .hv-banner {
   max-height: inherit;
-  height: auto;
-  width: 100%;
-  transform: translateX(-50%);
-  margin-left: 50%;
+  height: 100vh;
+  width: auto;
 }
 .hv-banner-nav-container {
   float: inherit;
@@ -47,8 +45,10 @@ input, textarea {
   padding-top: 3vw;
   padding-bottom: 3vw;
   position: absolute;
-  top: 0px;
-  right: 3vw;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 15vw;
+  bottom: 4vw;
 }
 .hv-banner-nav.active {
   background-color: $primary-color;
@@ -116,8 +116,7 @@ input, textarea {
    ========================================== */
 
 .hv-mission {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin: 5vh;
   position: relative;
 }
 .hv-mission hr {
@@ -129,7 +128,9 @@ input, textarea {
 }
 .hv-commercial-mission {
   @extend .scss-large-content-font;
+  font-size: 10vw !important;
 }
+
 /*
 .hv-art-mission {
   text-align: left;
@@ -160,12 +161,24 @@ input, textarea {
 
 .hv-case-study {
   min-width: inherit;
+  height: 100vh;
+  width: 100vh;
 }
 .hv-case-study-img {
-  left: inherit;
+  left: -100vw;
   margin-left: 50%;
   min-width: inherit;
   transform: translateX(-50%);
+  height: 100vh;
+}
+.hv-case-study-contents {
+  top: 40%;
+  position: absolute;
+  left: 0px;
+  padding: 10vw;;
+}
+.hv-case-study-catch {
+  width: 80vw;
 }
 
 /* ========================================== 

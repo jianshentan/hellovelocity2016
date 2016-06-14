@@ -141,7 +141,6 @@
       
 			{{{body}}}
   
-  
       {{#ifeq mobile true}}
         {{>mfooter}}
       {{else}}
@@ -154,7 +153,7 @@
     <script>
       // Loader
       $( window ).load( function() {
-        $( ".hv-loading-overlay" ).fadeOut();
+        $(".hv-loading-overlay").fadeOut();
       });
     </script>
     
@@ -164,8 +163,11 @@
       $(document).ready(function() {
         $('#fullpage').fullpage({
           scrollOverflow: true,
-          scrollOverflowOptions: { click: false }
-          //normalScrollElements: '.hv-projects' // TODO this is not working
+          {{#ifeq mobile true}}
+          scrollOverflowOptions: { click: true } // mobile hack to propagate clicks
+          {{else}}
+          scrollOverflowOptions: { click: false } // hack to propagate clicks
+          {{/ifeq}}
         });
       });
     </script>

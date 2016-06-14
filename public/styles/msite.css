@@ -5893,22 +5893,24 @@ body {
 
 /* Navigation ------------------------------- */
 .hv-nav {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background-color: #0000ff;
   position: fixed;
-  z-index: 1000;
+  z-index: 1001;
   cursor: pointer;
-  left: 0px;
-  top: 0px; }
+  left: 10px;
+  top: 10px;
+  border-radius: 50px;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5); }
 
 .hv-nav img {
-  width: 50px;
-  height: 50px;
-  margin: 10px; }
+  width: 60px;
+  height: 60px;
+  margin: 0px; }
 
 .hv-nav-expanded {
-  z-index: 999;
+  z-index: 1000;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -6042,23 +6044,28 @@ body {
   position: relative; }
 
 .hv-banner-container {
+  position: relative;
+  height: 100vh;
   overflow: hidden;
-  margin-top: 70px; }
+  margin-top: 0px; }
 
 .hv-banner {
   display: none;
   margin: auto;
-  width: 100%;
-  height: auto;
-  min-height: 390px; }
+  width: auto;
+  height: 100vh;
+  min-height: 390px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); }
 
 .hv-banner.active {
   display: block; }
 
 .hv-banner-nav-container {
   position: relative;
-  height: 10vh;
-  margin-top: -10vh; }
+  height: 25vh;
+  margin-top: -25vh; }
 
 .hv-banner-nav-wrapper {
   position: absolute;
@@ -6090,7 +6097,9 @@ body {
 .hv-mission-container {
   position: relative;
   margin-bottom: 10vh;
-  min-width: 720px; }
+  min-width: 720px;
+  width: 80%;
+  margin: 0 auto; }
 
 @media screen and (max-width: 1200px) {
   .hv-mission-container {
@@ -6123,12 +6132,13 @@ body {
 .hv-case-study {
   overflow: hidden;
   position: relative;
-  min-height: 600px; }
+  height: 80vh; }
 
 .hv-case-study-img {
   position: absolute;
   top: 0px;
-  left: 0px;
+  left: 50%;
+  transform: translateX(-50%);
   min-width: 768px;
   height: 100vh;
   min-height: 600px; }
@@ -6836,7 +6846,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #0000ff;
-  z-index: 1000;
+  z-index: 1002;
   overflow: hidden;
   top: 0px;
   left: 0px; }
@@ -6907,10 +6917,8 @@ input, textarea {
 
 .hv-banner {
   max-height: inherit;
-  height: auto;
-  width: 100%;
-  transform: translateX(-50%);
-  margin-left: 50%; }
+  height: 100vh;
+  width: auto; }
 
 .hv-banner-nav-container {
   float: inherit;
@@ -6918,8 +6926,10 @@ input, textarea {
   padding-top: 3vw;
   padding-bottom: 3vw;
   position: absolute;
-  top: 0px;
-  right: 3vw; }
+  left: 50%;
+  transform: translateX(-50%);
+  height: 15vw;
+  bottom: 4vw; }
 
 .hv-banner-nav.active {
   background-color: #0000ff; }
@@ -6983,8 +6993,7 @@ input, textarea {
    Main page - mission statements 
    ========================================== */
 .hv-mission {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin: 5vh;
   position: relative; }
 
 .hv-mission hr {
@@ -6993,6 +7002,9 @@ input, textarea {
   background-color: #0000ff;
   margin-top: 5vh;
   margin-bottom: 5vh; }
+
+.hv-commercial-mission {
+  font-size: 10vw !important; }
 
 /*
 .hv-art-mission {
@@ -7021,13 +7033,25 @@ input, textarea {
    Main page - Casestudy 
    ========================================== */
 .hv-case-study {
-  min-width: inherit; }
+  min-width: inherit;
+  height: 100vh;
+  width: 100vh; }
 
 .hv-case-study-img {
-  left: inherit;
+  left: -100vw;
   margin-left: 50%;
   min-width: inherit;
-  transform: translateX(-50%); }
+  transform: translateX(-50%);
+  height: 100vh; }
+
+.hv-case-study-contents {
+  top: 40%;
+  position: absolute;
+  left: 0px;
+  padding: 10vw; }
+
+.hv-case-study-catch {
+  width: 80vw; }
 
 /* ========================================== 
    Main page - projects 
