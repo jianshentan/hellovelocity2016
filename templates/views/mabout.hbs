@@ -1,12 +1,10 @@
 {{! default}}
 {{#each abouts}}
 {{#if @first}}
-<div class="hv-blog-filler">
-  <div class="hvm-container">
-    About
-  </div>
-</div>
 
+<div class="hv-blog-filler">
+  About
+</div>
 <div class="hv-about-banner">
   <div class="hvm-container">
     <div class="hv-about-banner-text">
@@ -16,30 +14,29 @@
   <img class="hv-about-banner-image" src="{{ bannerImage.url }}"/>
 </div>
 
-<div class="hvm-container">
-  <div class="hv-services">
-    <div class="hv-services-heading">
-      What do we do?
-    </div>
-    <div class="hv-service-wrapper">
-      {{#each services}}
-      <div class="hv-service">
-        <div class="hv-service-text">
-          <div class="hv-service-text-description">
-            <div class="hv-service-text-title">{{ this.name }}</div>
-            {{#if this.description }}
-            {{ this.description}}
-            {{/if}}
-          </div>
+<div class="hv-services">
+  <div class="hv-services-heading">
+    What do we do?
+  </div>
+  <div class="hv-service-wrapper">
+    {{#each services}}
+    <div class="hv-service">
+      <div class="hv-service-text">
+        <div class="hv-service-text-description">
+          <div class="hv-service-text-title">{{ this.name }}</div>
+          {{#if this.description }}
+          {{ this.description}}
+          {{/if}}
         </div>
-        <div class="hv-service-overlay"></div>
-        <img class="hv-service-image" src="{{ this.image.url }}">
       </div>
-      {{/each}}
+      <div class="hv-service-overlay"></div>
+      <img class="hv-service-image" src="{{ this.image.url }}">
     </div>
+    {{/each}}
   </div>
 </div>
 
+<!--
 <div class="hv-about-description">
   <div class="hvm-container">
     <div class="hv-about-description-text">
@@ -47,6 +44,7 @@
     </div>
   </div>
 </div>
+-->
 
 <div class="hvm-contact-wrapper">
   <div class="hvm-container">
@@ -74,7 +72,7 @@
 
 <div class="hv-team">
   <div class="hvm-container">
-    <div class="hv-team-heading">Team Selfies</div>
+    <div class="hv-team-heading">Our Team</div>
     <div class="hv-members">
       {{#each members}}
       <div class="hv-member">

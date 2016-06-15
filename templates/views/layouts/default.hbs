@@ -83,10 +83,11 @@
 		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
     <script src="/js/fullpage/scrolloverflow.min.js"></script>
 		<script src="/js/fullpage/jquery.fullPage.min.js"></script>
+		{{#ifeq mobile true}}<script src="/js/interact.min.js"></script>{{/ifeq}}
 
     <!-- Navigation -->
     <div
-      {{#ifeq mobile true}}class="hv-nav hvm"
+      {{#ifeq mobile true}}class="hv-nav hvm draggable"
       {{else}}class="hv-nav"
       {{/ifeq}}>
       <img src="/images/logo.png">
@@ -162,6 +163,10 @@
       // full page scroller
       $(document).ready(function() {
         $('#fullpage').fullpage({
+          /*
+          navigation: true,
+          navigationPosition: 'right',
+          */
           scrollOverflow: true,
           {{#ifeq mobile true}}
           scrollOverflowOptions: { click: true } // mobile hack to propagate clicks
@@ -172,10 +177,101 @@
       });
     </script>
     {{/ifeq}}
+    
+    <!-- Handle Nav open/close + Make mobile nav draggable -->
+    {{#ifeq mobile true}}
+    <script>
+      var isNavOpen = false;
+      var navExpanded= $( ".hv-nav-expanded" );
+      
+      // target elements with the "draggable" class
+      interact('.draggable')
+      .on('tap', function(event) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        
+        // open navigation 
+        if( !isNavOpen ) {
+          $( "body" ).css( "overflow", "hidden" );
+          navExpanded.slideDown();
+          $( this ).find( "img" ).fadeOut( function() {
+            $( this ).attr( "src","../images/close-icon.png" )
+            $( this ).fadeIn()
+          });
+          isNavOpen = true;
+        } else {
+          $( "body" ).css( "overflow", "auto" );
+          navExpanded.slideUp();
+          $( this ).find( "img" ).fadeOut( function() {
+            $( this ).attr( "src","../images/logo.png" )
+            $( this ).fadeIn()
+          });
+          isNavOpen = false;
+        }
+        
+      }, true)
+      .draggable({
+        // enable inertial throwing
+        inertia: true,
+        // keep the element within the area of it's parent
+        restrict: {
+          restriction: "parent",
+          endOnly: true,
+          elementRect: { top: 0, left: 0, bottom: 0, right: 0 }
+        },
+        // enable autoScroll
+        autoScroll: true,
+    
+        // call this function on every dragmove event
+        onmove: dragMoveListener
 
-    <script src="/js/default.js"></script>
+      });
+    
+      function dragMoveListener (event) {
+        var target = event.target,
+            // keep the dragged position in the data-x/data-y attributes
+            x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+            y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+    
+        // translate the element
+        target.style.webkitTransform =
+        target.style.transform =
+          'translate(' + x + 'px, ' + y + 'px)';
+    
+        // update the posiion attributes
+        target.setAttribute('data-x', x);
+        target.setAttribute('data-y', y);
+      }
+    
+      // this is used later in the resizing and gesture demos
+      window.dragMoveListener = dragMoveListener;
+    </script>
+    {{else}}
+    <script>
+      var isNavOpen = false;
+      var navExpanded= $( ".hv-nav-expanded" );
+      $( ".hv-nav" ).click( function() {
+        if( !isNavOpen ) {
+          $( "body" ).css( "overflow", "hidden" );
+          navExpanded.slideDown();
+          $( this ).find( "img" ).fadeOut( function() {
+            $( this ).attr( "src","../images/close-icon.png" )
+            $( this ).fadeIn()
+          });
+          isNavOpen = true;
+        } else {
+          $( "body" ).css( "overflow", "auto" );
+          navExpanded.slideUp();
+          $( this ).find( "img" ).fadeOut( function() {
+            $( this ).attr( "src","../images/logo.png" )
+            $( this ).fadeIn()
+          });
+          isNavOpen = false;
+        }
+      });
+    </script>
+    {{/ifeq}}
 
 		{{{isAdminEditorJS user}}}
-
-	</body>
+ </body>
 </html>
