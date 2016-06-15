@@ -83,12 +83,12 @@
 		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
     <script src="/js/fullpage/scrolloverflow.min.js"></script>
 		<script src="/js/fullpage/jquery.fullPage.min.js"></script>
-		{{#ifeq mobile true}}<script src="/js/interact.min.js"></script>{{/ifeq}}
+		<script src="/js/interact.min.js"></script>
 
     <!-- Navigation -->
     <div
       {{#ifeq mobile true}}class="hv-nav hvm draggable"
-      {{else}}class="hv-nav"
+      {{else}}class="hv-nav draggable"
       {{/ifeq}}>
       <img src="/images/logo.png">
     </div>
@@ -179,7 +179,6 @@
     {{/ifeq}}
     
     <!-- Handle Nav open/close + Make mobile nav draggable -->
-    {{#ifeq mobile true}}
     <script>
       var isNavOpen = false;
       var navExpanded= $( ".hv-nav-expanded" );
@@ -246,6 +245,8 @@
       // this is used later in the resizing and gesture demos
       window.dragMoveListener = dragMoveListener;
     </script>
+    <!--
+    {{#ifeq mobile true}}
     {{else}}
     <script>
       var isNavOpen = false;
@@ -271,6 +272,7 @@
       });
     </script>
     {{/ifeq}}
+    -->
 
 		{{{isAdminEditorJS user}}}
  </body>

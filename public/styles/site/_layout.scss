@@ -73,8 +73,8 @@ body {
   position: fixed;
   z-index: 1001;
   cursor: pointer;
-  left: 10px;
-  top: 10px;
+  left: 15px;
+  top: 15px;
   border-radius: 50px;
   box-shadow: 2px 2px 7px rgba(0,0,0,0.5); 
 }
@@ -695,10 +695,13 @@ body {
 .hv-about-banner-text {
   @extend .scss-large-content-font;
   color: white;
-  width: 100%;
+  width: 80%;
   max-width: $screen-lg-min;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 20vh;
   margin-bottom: 20vh;
+  text-align: center;
 }
 @media screen and (min-width: $screen-lg-min) {
   .hv-about-banner-image {
