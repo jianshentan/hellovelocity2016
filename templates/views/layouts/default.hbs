@@ -163,16 +163,16 @@
       // full page scroller
       $(document).ready(function() {
         $('#fullpage').fullpage({
-          /*
-          navigation: true,
-          navigationPosition: 'right',
-          */
           scrollOverflow: true,
           {{#ifeq mobile true}}
           scrollOverflowOptions: { click: true } // mobile hack to propagate clicks
           {{else}}
           scrollOverflowOptions: { click: false } // hack to propagate clicks
           {{/ifeq}}
+        });
+        
+        $("#fp-nav a").each(function() {
+          $(this).attr('href', "");
         });
       });
     </script>
@@ -245,34 +245,6 @@
       // this is used later in the resizing and gesture demos
       window.dragMoveListener = dragMoveListener;
     </script>
-    <!--
-    {{#ifeq mobile true}}
-    {{else}}
-    <script>
-      var isNavOpen = false;
-      var navExpanded= $( ".hv-nav-expanded" );
-      $( ".hv-nav" ).click( function() {
-        if( !isNavOpen ) {
-          $( "body" ).css( "overflow", "hidden" );
-          navExpanded.slideDown();
-          $( this ).find( "img" ).fadeOut( function() {
-            $( this ).attr( "src","../images/close-icon.png" )
-            $( this ).fadeIn()
-          });
-          isNavOpen = true;
-        } else {
-          $( "body" ).css( "overflow", "auto" );
-          navExpanded.slideUp();
-          $( this ).find( "img" ).fadeOut( function() {
-            $( this ).attr( "src","../images/logo.png" )
-            $( this ).fadeIn()
-          });
-          isNavOpen = false;
-        }
-      });
-    </script>
-    {{/ifeq}}
-    -->
 
 		{{{isAdminEditorJS user}}}
  </body>

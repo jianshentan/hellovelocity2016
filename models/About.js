@@ -23,10 +23,6 @@ About.add(
   {
     services: { type: Types.Relationship, ref: 'Service', many: true }
   },
-  "Description",
-  {
-    descriptionText: { type: Types.Html, wysiwyg: true, height: 300 }
-  },
   "Contact",
   {
     instagram: { type: Types.CloudinaryImage },

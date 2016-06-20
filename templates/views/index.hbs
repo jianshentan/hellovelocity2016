@@ -21,10 +21,10 @@
     
     {{#each banners}}
     {{#if display}}
-    <img src="{{ image.url }}" data-id="{{@index}}"
+    <a href="{{ link }}"><img src="{{ image.url }}" data-id="{{@index}}"
       {{#if @first}} class="hv-banner active" 
       {{else}} class="hv-banner" 
-      {{/if}}/>
+      {{/if}}/></a>
     {{/if}}
     {{/each}}
   </div>
@@ -55,7 +55,7 @@
         and creates viral campaigns to<br>
         share their ideas with the world.
         -->
-        Hello Velocity creates brands and
+        <a href="/about">Hello Velocity</a> creates brands and
         viral campaigns to provoke conversation.
       </div>
       <!--
@@ -86,7 +86,7 @@
             <span class="hv-case-study-title">{{ title }}</span>
           </div>  
           <div class="hv-case-study-catch">{{ catchPhrase }}</div>
-          <a href="{{ actionLink }}"><div class="hv-case-study-link">See how we did it!</div></a>
+          <a href="{{ actionLink }}"><div class="hv-case-study-link">Learn more</div></a>
         </div>
       </div>
       <div class="hv-case-study-bg"></div>

@@ -306,9 +306,9 @@ body {
 .hv-commercial-mission {
   color: $primary-color;
 }
-.hv-mission-container a {
+.hv-commercial-mission a {
   color: $primary-color;
-  text-decoration: none;
+  text-decoration: underline;
 }
 /*
 .hv-art-mission,
@@ -356,6 +356,7 @@ body {
   top: 40%;
   position: absolute;
   left: 60px;
+  z-index: 500;
 }
 .hv-case-study-title-container {
   background-color: $primary-color;

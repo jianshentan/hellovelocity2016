@@ -6108,9 +6108,9 @@ body {
 .hv-commercial-mission {
   color: #0000ff; }
 
-.hv-mission-container a {
+.hv-commercial-mission a {
   color: #0000ff;
-  text-decoration: none; }
+  text-decoration: underline; }
 
 /*
 .hv-art-mission,
@@ -6156,7 +6156,8 @@ body {
 .hv-case-study-contents {
   top: 40%;
   position: absolute;
-  left: 60px; }
+  left: 60px;
+  z-index: 500; }
 
 .hv-case-study-title-container {
   background-color: #0000ff;
