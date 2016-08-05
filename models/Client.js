@@ -13,7 +13,9 @@ var Client = new keystone.List('Client', {
 
 Client.add({
 	name: { type: String, required: true },
-	icon: { type: Types.CloudinaryImage, label: "Icon must be in square format" }
+	icon: { type: Types.CloudinaryImage, label: "Icon must be in square format" },
+	linkable: { type: Types.Boolean, default: true },
+	link: { type: Types.Url, dependsOn: { linkable: true } },
 });
 
 Client.relationship({ ref: 'About', path: 'clients'});

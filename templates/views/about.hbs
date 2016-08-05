@@ -50,8 +50,13 @@
   <div class="row row-centered">
     {{#each clients}}
     <div class="col-xs-4 col-sm-3 col-md-2 col-centered " style="text-align:center;">
+      
+      {{#if linkable}}
+      <a href="{{ link }}" target="_blank"><img src="{{ icon.url }}" style="width:80%"></a>
+      {{else}}
       <img src="{{ icon.url }}" style="width:80%">
-      <div class="">{{ name }}</div>
+      {{/if}}
+      
     </div>
     {{/each}}
   </div>
