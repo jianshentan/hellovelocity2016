@@ -817,10 +817,15 @@ body {
   /* inline-block space fix */
   margin-right:-4px;
 }
-.col-fixed {
-  /* custom width */
-  width:320px;
+.hv-client-header {
+  @extend .scss-large-content-font;
+  color: $primary-color;
+  text-align: center; 
 }
+.hv-client-logo {
+  margin-bottom:20px;
+}
+
 
 /* About contact ------------------------ */
 .hv-contact {

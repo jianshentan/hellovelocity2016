@@ -46,6 +46,28 @@
 </div>
 -->
 
+<div class="container">
+  <br>
+  <br>
+  <div class="hv-client-header">Selected Clients</div>
+  <br>
+  <div class="row row-centered">
+    {{#each clients}}
+    <div class="col-xs-4 col-centered " style="text-align:center;">
+      
+      {{#if linkable}}
+      <a href="{{ link }}" target="_blank"><img src="{{ icon.url }}" style="width:80%"></a>
+      {{else}}
+      <img src="{{ icon.url }}" style="width:80%">
+      {{/if}}
+      
+    </div>
+    {{/each}}
+  </div>
+  <br>
+  <br>
+</div>
+
 <div class="hvm-contact-wrapper">
   <div class="hvm-container">
     <div class="hv-contact">

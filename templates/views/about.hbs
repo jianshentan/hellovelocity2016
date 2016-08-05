@@ -47,9 +47,14 @@
 <hr style="height:0px;border-top:3px solid blue">
 
 <div class="container">
+  <br>
+  <br>
+  <div class="hv-client-header">Selected Clients</div>
+  <br>
+  <br>
   <div class="row row-centered">
     {{#each clients}}
-    <div class="col-xs-4 col-sm-3 col-md-2 col-centered " style="text-align:center;">
+    <div class="col-xs-4 col-sm-3 col-md-2 col-centered hv-client-logo" style="text-align:center;">
       
       {{#if linkable}}
       <a href="{{ link }}" target="_blank"><img src="{{ icon.url }}" style="width:80%"></a>
@@ -60,6 +65,8 @@
     </div>
     {{/each}}
   </div>
+  <br>
+  <br>
 </div>
 
 <hr style="height:0px;border-top:3px solid blue">
