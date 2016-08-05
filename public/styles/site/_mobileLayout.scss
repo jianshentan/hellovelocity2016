@@ -45,10 +45,10 @@ input, textarea {
   padding-top: 3vw;
   padding-bottom: 3vw;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   height: 15vw;
   bottom: 4vw;
+  width: 100vw;
+  text-align: center;
 }
 .hv-banner-nav.active {
   background-color: $primary-color;

@@ -805,6 +805,23 @@ body {
   }
 }
 
+/* About - Clients ---------------------- */
+.row-centered {
+  text-align:center;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
+}
+.col-fixed {
+  /* custom width */
+  width:320px;
+}
+
 /* About contact ------------------------ */
 .hv-contact {
   margin-top: 8vh;
@@ -972,6 +989,7 @@ hv-contact-text-wrapper .a {
   padding-bottom: 48px;
   color: #555;
 }
+
 .hv-blog.hover {
   background-color: $primary-color;
   color: #eee;
@@ -1035,6 +1053,34 @@ hv-contact-text-wrapper .a {
   padding-top: 10vh;
   padding-bottom: 10vh;
   bottom: 0px;
+}
+@media only screen and (min-width : $screen-lg-min) {
+  .hv-post-banner-text,
+  .hv-post {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+@media only screen and (max-width : $screen-md-max) {
+  .hv-post-banner-text,
+  .hv-post {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+}
+@media only screen and (max-width : $screen-sm-max) {
+  .hv-post-banner-text,
+  .hv-post {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+}
+@media only screen and (max-width : $screen-xs-max) {
+  .hv-post-banner-text,
+  .hv-post {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 .hv-post hr {
   height: 3px;

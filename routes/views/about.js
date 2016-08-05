@@ -11,7 +11,9 @@ exports = module.exports = function(req, res) {
 
   view.query('abouts', keystone.list('About').model.find()
                                .populate('services')
-                               .populate('members'));
+                               .populate('members')
+                               .populate('clients'));
+                               
 	
   // Render the view
   if( req.isMobile ) {

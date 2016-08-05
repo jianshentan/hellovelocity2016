@@ -19,10 +19,10 @@
   <div class="hv-banner-container">
     {{#each banners}}
     {{#if display}}
-    <img src="{{ mobileImage.url }}" data-id="{{@index}}"
+    <a href="{{ link }}" target="_blank"><img src="{{ mobileImage.url }}" data-id="{{@index}}"
       {{#if @first}} class="hv-banner active" 
       {{else}} class="hv-banner" 
-      {{/if}}/>
+      {{/if}}/></a>
     {{/if}}
     {{/each}}
   </div>

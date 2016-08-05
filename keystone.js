@@ -65,7 +65,7 @@ keystone.set('routes', require('./routes'));
 keystone.set('nav', {
 	'posts': ['posts', 'post-categories'],
 	'users': 'users',
-  'content': ['banners', 'case-studies', 'abouts', 'services', 'members'], 
+  'content': ['banners', 'case-studies', 'abouts', 'services', 'members', 'clients'], 
   'projects': 'projects',
   'social': 'fb-banners',
   'links': 'links'

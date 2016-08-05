@@ -23,7 +23,7 @@
           <div class="hv-service-text-description">
             <div class="hv-service-text-title">{{ this.name }}</div>
             {{#if this.description }}
-            {{ this.description}}
+            {{ this.description }}
             {{/if}}
           </div>
         </div>
@@ -44,6 +44,19 @@
   </div>
 </div>
 -->
+<hr style="height:0px;border-top:3px solid blue">
+
+<div class="container">
+  <div class="row row-centered">
+    {{#each clients}}
+    <div class="col-xs-4 col-sm-3 col-md-2 col-centered " style="text-align:center;">
+      <img src="{{ icon.url }}" style="width:80%">
+      <div class="">{{ name }}</div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
 <hr style="height:0px;border-top:3px solid blue">
 
 <div class="container">
