@@ -271,7 +271,9 @@ body {
 }
 .hv-banner-nav {
   border: 3px solid white;
-  color: white;
+  color: blue;
+  background: white;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
   border-radius: 20px;
   width: 40px;
   height: 40px;
