@@ -164,7 +164,7 @@
       $(document).ready(function() {
         $('#fullpage').fullpage({
           scrollOverflow: true,
-          anchors: ['top', 'mission', 'featured', 'projects', 'subscribe'],
+          anchors: ['top-anchor', 'mission-anchor', 'featured-anchor', 'projects-anchor', 'subscribe-anchor'],
           {{#ifeq mobile true}}
           scrollOverflowOptions: { click: true } // mobile hack to propagate clicks
           {{else}}
@@ -189,7 +189,14 @@
       .on('tap', function(event) {
         event.preventDefault();
         event.stopImmediatePropagation();
-        
+            
+        // navigation
+        $(".hv-nav-links a").each(function() {
+          $(this).click(function(){
+            navExpanded.slideUp();
+          });
+        });
+      
         // open navigation 
         if( !isNavOpen ) {
           $( "body" ).css( "overflow", "hidden" );

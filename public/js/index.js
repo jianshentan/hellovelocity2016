@@ -3,8 +3,12 @@ var globals = [isMobile, globalEventManager];
 (function(globals) {
   
   $(document).ready(function() {
-  
+    
     var eventManager = globals[1];
+    
+    // navigation
+    $(".hv-nav-link").click(function(){
+    });
   
     // carousel
     var timer;
