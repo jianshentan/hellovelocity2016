@@ -164,6 +164,7 @@
       $(document).ready(function() {
         $('#fullpage').fullpage({
           scrollOverflow: true,
+          anchors: ['top', 'mission', 'featured', 'projects', 'subscribe'],
           {{#ifeq mobile true}}
           scrollOverflowOptions: { click: true } // mobile hack to propagate clicks
           {{else}}

@@ -5,16 +5,8 @@
 <script src="/js/util.js"></script>
 <script src="/js/index.js"></script>
 
-{{#ifeq section "projects" }}
-<script>
-  $( document ).ready( function() {
-    $( window ).scrollTop( $( "#hv-projects" ).offset().top + 24);
-  });
-</script>
-{{/ifeq}}
-
 <!-- Banners -->
-<div class="hv-banners section">
+<div class="hv-banners section" data-anchor="top">
 
   <!-- Banner Content -->
   <div class="hv-banner-container">
@@ -45,7 +37,7 @@
 </div>
 
 <!-- Mission -->
-<div class="section">
+<div class="section" data-anchor="mission">
   <div class="container">
     <div class="hv-mission-container">
       <div class="hv-commercial-mission">
@@ -73,7 +65,7 @@
 </div>
 
 <!-- Main Case Study -->
-<div class="section">
+<div class="section" data-anchor="featured">
   <div class="container">
     <div class="hv-case-study">
       {{#each case-studies}}
@@ -97,7 +89,7 @@
 </div>
 
 <!-- Project Banner Grid -->
-<div class="section">
+<div class="section" data-anchor="projects">
   <div class="container" id="hv-projects">
     <div class="hv-projects-heading">Explore our projects and see how we bring ideas to life!</div>
     <div class="hv-projects-banners row row-eq-height">

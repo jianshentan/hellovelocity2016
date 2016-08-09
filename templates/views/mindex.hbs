@@ -5,16 +5,8 @@
 <script src="/js/util.js"></script>
 <script src="/js/index.js"></script>
 
-{{#ifeq section "projects" }}
-<script>
-  $( document ).ready( function() {
-    $( window ).scrollTop( $( "#hv-projects" ).offset().top-113);
-  });
-</script>
-{{/ifeq}}
-
 <!-- Mobile Banners -->
-<div class="hv-banners section" id="hvm-banner">
+<div class="hv-banners section" id="hvm-banner" data-anchor="top">
   <!-- Banner Content -->
   <div class="hv-banner-container">
     {{#each banners}}
@@ -42,7 +34,7 @@
 </div>
 
 <!-- Mission -->
-<div class="section">
+<div class="section" data-anchor="mission">
   <div class="hv-mission">
     <div class="hv-commercial-mission-wrapper hvm-container">
       <span class=" hv-commercial-mission"><a href="/about">Hello Velocity</a> creates brands and viral campaigns to provoke conversation.</span>
@@ -51,7 +43,7 @@
 </div>
 
 <!-- Main Case Study -->
-<div class="section">
+<div class="section" data-anchor="featured">
   <div class="hv-case-study ">
     {{#each case-studies}}
     {{#if @first}}
@@ -74,7 +66,7 @@
 </div>
   
 <!-- Project Banner Grid -->
-<div class="section">
+<div class="section" data-anchor="projects">
   <div class="hvm-container" id="hv-projects">
     <div class="hv-projects-heading">Explore our projects and see how we bring ideas to life!</div>
     <div class="hv-projects-banners">
