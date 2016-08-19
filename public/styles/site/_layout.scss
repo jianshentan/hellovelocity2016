@@ -293,41 +293,32 @@ body {
 
 /* Mission ---------------------------------- */
 .hv-mission-container {
-  @extend .scss-large-content-font;
   position: relative;
   margin-bottom: 10vh;
   min-width: $screen-xs-max - 48;
   width: 80%;
   margin: 0 auto;
 }
+.hv-mission-container-text {
+  @extend .scss-large-content-font;
+  color: $primary-color;
+  
+}
 @media screen and (max-width: $screen-lg-min) {
-  .hv-mission-container {
+  .hv-mission-container-text {
     font-size: 5vw !important;
   }
 }
-.hv-commercial-mission {
-  color: $primary-color;
+.hv-mission-about {
+  color: white;
+  background-color: $primary-color;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+  font-size: 2.0em;
 }
-.hv-commercial-mission a {
-  color: $primary-color;
-  text-decoration: underline;
-}
-/*
-.hv-art-mission,
-.hv-commercial-mission {
-  position: absolute;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: clip;
-  width: 50%;
-}
-.hv-art-mission {
-  text-align: right;
-  direction: rtl;
-  color: $primary-color;
-  right: 0px;
-}
-*/
 
 /* Case Study -------------------------------- */
 .hv-case-study {

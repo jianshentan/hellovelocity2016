@@ -5843,8 +5843,8 @@ button.close {
   font-weight: 700; }
 
 /* Sass variables and Classes -------------- */
-.scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-about-description-text > p,
-.hv-about-description-text > div, .hv-client-header, .hv-contact-text-wrapper .c, .hv-blog-header, .hv-post-banner-text, .hv-commercial-mission, .hv-blog-filler {
+.scss-large-content-font, .hv-mission-container-text, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-about-description-text > p,
+.hv-about-description-text > div, .hv-client-header, .hv-contact-text-wrapper .c, .hv-blog-header, .hv-post-banner-text, .hvm-mission-container-text, .hv-blog-filler {
   font-family: Montserrat;
   font-weight: 700;
   font-size: 5vw; }
@@ -5855,8 +5855,8 @@ button.close {
   font-size: 5vw; }
 
 @media all and (max-width: 768px) {
-  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-about-description-text > p,
-  .hv-about-description-text > div, .hv-client-header, .hv-contact-text-wrapper .c, .hv-blog-header, .hv-post-banner-text, .hv-commercial-mission, .hv-blog-filler {
+  .scss-large-content-font, .hv-mission-container-text, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-about-description-text > p,
+  .hv-about-description-text > div, .hv-client-header, .hv-contact-text-wrapper .c, .hv-blog-header, .hv-post-banner-text, .hvm-mission-container-text, .hv-blog-filler {
     font-size: 42px;
     line-height: 48px; }
   .scss-medium-content-font, .hv-services-heading, .hv-team-heading {
@@ -5864,8 +5864,8 @@ button.close {
     line-height: 40px; } }
 
 @media screen and (min-width: 992px) {
-  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-about-description-text > p,
-  .hv-about-description-text > div, .hv-client-header, .hv-contact-text-wrapper .c, .hv-blog-header, .hv-post-banner-text, .hv-commercial-mission, .hv-blog-filler {
+  .scss-large-content-font, .hv-mission-container-text, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-about-description-text > p,
+  .hv-about-description-text > div, .hv-client-header, .hv-contact-text-wrapper .c, .hv-blog-header, .hv-post-banner-text, .hvm-mission-container-text, .hv-blog-filler {
     /*.hv-about-banner-text {*/
     font-size: 48px;
     line-height: 68px; }
@@ -5875,8 +5875,8 @@ button.close {
     line-height: 45px; } }
 
 @media screen and (min-width: 1200px) {
-  .scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-about-description-text > p,
-  .hv-about-description-text > div, .hv-client-header, .hv-contact-text-wrapper .c, .hv-blog-header, .hv-post-banner-text, .hv-commercial-mission, .hv-blog-filler {
+  .scss-large-content-font, .hv-mission-container-text, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-about-description-text > p,
+  .hv-about-description-text > div, .hv-client-header, .hv-contact-text-wrapper .c, .hv-blog-header, .hv-post-banner-text, .hvm-mission-container-text, .hv-blog-filler {
     font-size: 64px;
     line-height: 80px; }
   .scss-medium-content-font, .hv-services-heading, .hv-team-heading {
@@ -6103,33 +6103,23 @@ body {
   width: 80%;
   margin: 0 auto; }
 
-@media screen and (max-width: 1200px) {
-  .hv-mission-container {
-    font-size: 5vw !important; } }
-
-.hv-commercial-mission {
+.hv-mission-container-text {
   color: #0000ff; }
 
-.hv-commercial-mission a {
-  color: #0000ff;
-  text-decoration: underline; }
+@media screen and (max-width: 1200px) {
+  .hv-mission-container-text {
+    font-size: 5vw !important; } }
 
-/*
-.hv-art-mission,
-.hv-commercial-mission {
-  position: absolute;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: clip;
-  width: 50%;
-}
-.hv-art-mission {
-  text-align: right;
-  direction: rtl;
-  color: $primary-color;
-  right: 0px;
-}
-*/
+.hv-mission-about {
+  color: white;
+  background-color: #0000ff;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+  font-size: 2.0em; }
+
 /* Case Study -------------------------------- */
 .hv-case-study {
   overflow: hidden;
@@ -6931,8 +6921,8 @@ body {
     transform: rotate(360deg); } }
 
 /* Sass variables and Classes -------------- */
-.scss-large-content-font, .hv-mission-container, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-about-description-text > p,
-.hv-about-description-text > div, .hv-client-header, .hv-contact-text-wrapper .c, .hv-blog-header, .hv-post-banner-text, .hv-commercial-mission, .hv-blog-filler {
+.scss-large-content-font, .hv-mission-container-text, .hv-case-study-title, .hv-projects-heading, .hv-project-title, .hv-about-banner-text, .hv-about-description-text > p,
+.hv-about-description-text > div, .hv-client-header, .hv-contact-text-wrapper .c, .hv-blog-header, .hv-post-banner-text, .hvm-mission-container-text, .hv-blog-filler {
   font-size: 8vw; }
 
 .hvm-container {
@@ -7000,7 +6990,7 @@ input, textarea {
 .hv-footer-information,
 .hv-newsletter {
   height: inherit;
-  width: 100vw; }
+  width: 100v; }
 
 .hv-newsletter {
   font-size: 8vw; }
@@ -7040,43 +7030,22 @@ input, textarea {
 /* ========================================== 
    Main page - mission statements 
    ========================================== */
-.hv-mission {
-  margin: 5vh;
-  position: relative; }
+.hv-mission-container {
+  min-width: inherit; }
 
-.hv-mission hr {
-  border: 0px;
-  height: 3px;
-  background-color: #0000ff;
-  margin-top: 5vh;
-  margin-bottom: 5vh; }
+.hvm-mission-container-text {
+  color: #0000ff; }
 
-.hv-commercial-mission {
-  font-size: 10vw !important; }
-
-/*
-.hv-art-mission {
-  text-align: left;
-}
-.hv-art-mission,
-.hv-commercial-mission {
-  @extend .scss-large-content-font;
-  font-size: 6.5vw;
-  position: relative; 
-  white-space: inherit;
-  overflow: inherit;
-  text-overflow: inherit;
-  width: inherit;
-}
-.hvm-mission-learn-more {
-  background-color: $primary-color;
+.hvm-mission-about {
   color: white;
-  padding: 20px;
-  text-align: center;
-  margin-top: 3vw;
-  font-size: 5vw;
-}
-*/
+  background-color: #0000ff;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+  font-size: 4vw; }
+
 /* ========================================== 
    Main page - Casestudy 
    ========================================== */

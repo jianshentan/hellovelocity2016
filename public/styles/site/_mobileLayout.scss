@@ -72,7 +72,7 @@ input, textarea {
 .hv-footer-information,
 .hv-newsletter {
   height: inherit;
-  width: 100vw;
+  width: 100v;
 }
 .hv-newsletter {
   font-size: 8vw;
@@ -114,45 +114,23 @@ input, textarea {
    Main page - mission statements 
    ========================================== */
 
-.hv-mission {
-  margin: 5vh;
-  position: relative;
+.hv-mission-container {
+  min-width: inherit;
 }
-.hv-mission hr {
-  border: 0px;
-  height: 3px;
-  background-color: $primary-color;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-}
-.hv-commercial-mission {
+.hvm-mission-container-text {
   @extend .scss-large-content-font;
-  font-size: 10vw !important;
+  color: $primary-color;
 }
-
-/*
-.hv-art-mission {
-  text-align: left;
-}
-.hv-art-mission,
-.hv-commercial-mission {
-  @extend .scss-large-content-font;
-  font-size: 6.5vw;
-  position: relative; 
-  white-space: inherit;
-  overflow: inherit;
-  text-overflow: inherit;
-  width: inherit;
-}
-.hvm-mission-learn-more {
-  background-color: $primary-color;
+.hvm-mission-about {
   color: white;
-  padding: 20px;
-  text-align: center;
-  margin-top: 3vw;
-  font-size: 5vw;
+  background-color: $primary-color;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+  font-size: 4vw;
 }
-*/
 
 /* ========================================== 
    Main page - Casestudy 
