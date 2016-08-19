@@ -6919,3 +6919,25 @@ body {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
+/* Hide scroll bar */
+html {
+  overflow: scroll;
+  overflow-x: hidden; }
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */
+  background: transparent;
+  /* optional: just make scrollbar invisible */ }
+
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000; }
+
+.fp-scroller {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none; }
+
+.fp-scroller::-webkit-scrollbar {
+  display: none; }
