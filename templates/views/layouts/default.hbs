@@ -255,6 +255,22 @@
     
       // this is used later in the resizing and gesture demos
       window.dragMoveListener = dragMoveListener;
+      
+      /* -----------------------------
+       --- load home page when click left button
+       ----------------------------- */
+       
+      $('body').keydown(function(e) {
+        var overlay = $(".hv-loading-overlay");
+        if(e.keyCode == 39) { // right 
+          overlay.addClass('white');
+          overlay.css("left", "100vw");
+          overlay.show();
+          overlay.animate({ "left": "0px" }, function() {
+            window.location.href = "http://www.hellovelocity.com";
+          });
+        }
+      });
     </script>
 
 		{{{isAdminEditorJS user}}}
