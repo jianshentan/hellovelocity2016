@@ -166,8 +166,8 @@
           hybrid: true,
           fitToSection: false,
           anchors: ['top-anchor', 'mission-anchor', 'featured-anchor', 'projects-anchor', 'subscribe-anchor'],
-          {{#ifeq mobile true}}
           scrollOverflow: true,
+          {{#ifeq mobile true}}
           scrollOverflowOptions: { click: true } // mobile hack to propagate clicks
           {{else}}
           scrollOverflowOptions: { click: false } // hack to propagate clicks
